@@ -1,0 +1,96 @@
+/*Gerais*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+body{
+   background: #0f1727;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    text-decoration: underline #2691d9;
+}
+
+/*Caixa com nomes e tema*/
+section{
+    position: absolute;
+    transform: translate(-50%, -45%);
+    top: 23rem;
+    left: 50%;
+    width: 600px;
+    background: white;
+    border-radius: 15px;
+    padding: 80px 100px;
+}
+
+.integrantes{
+    text-align: center;
+}
+
+.integrantes h2{
+    font-size: 30px;
+    color: #2691d9;
+    margin-top: 10px;
+    text-decoration: underline #04243a;
+}
+
+.integrantes p{
+    margin-top: 11px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/*Modelo de Navegabilidade*/
+.header{
+    text-align: center;
+    margin-top: 800px;
+}
+
+.navega{
+    margin-top: 55px;
+    color: #2691d9;
+}
+
+.navega h2{
+    color: #2691d9;
+    margin-top: 1rem;
+}
+
+.img{
+    width: 470px;
+    margin-top: 20px;
+}
+
+.img_desk{
+    width: 600px;
+    margin-top: 20px;
+}
+
+.bd{
+    color: white;
+    /*margin-left: 42%;*/    
+    text-align: center;
+}
+
+/*Parte nova*/
+
+#dicionario{
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+#descricao{
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+.semana{
+    margin-top: 75px;
+}
