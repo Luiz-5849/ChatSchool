@@ -96,6 +96,7 @@
         create table perfil(<br>
         cod_perfil int primary key auto_increment,<br>
         nome varchar(50) null,<br>
+        apelido varchar(15), <br>
         bio varchar(280) null,<br>
         cod_imagem int null,<br>
         foreign key(cod_imagem) references imagens(cod_imagem),<br>
@@ -236,6 +237,7 @@
             <br><br>
             <b>Banco de Dados</b><br>
             - Alteramos o campo login da tabela login de varchar(15) para varchar (40)<br>
+            - Adicionamos o campo apelido na tabela perfil<br>
             <br>
             <b>Back-end</b><br>
             - Criação do 'cad.php', código responsável por cadastrar os dados inseridos na tela 'primeiro_acesso.html' no banco de dados<br>
