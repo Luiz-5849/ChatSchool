@@ -152,7 +152,6 @@
         curso varchar(15) not null,<br>
         periodo varchar(5) not null<br>
         );<br>
-        desc turma;<br>
         <br>
         create table comunicado(<br>
         cod_comunicado int primary key auto_increment,<br>
@@ -180,6 +179,15 @@
         data_mensagem date not null,<br>
         hora_mensagem time not null<br>
         );<br>
+        <br>
+        create table enturmando(<br>
+        cod_enturmando int not null primary key auto_increment,<br>
+        cod_turma int(3) not null,<br>
+        foreign key (cod_turma) references turma(cod_turma),<br>
+        cod_perfil int not null,<br>
+        foreign key (cod_perfil) references perfil(cod_perfil)<br>
+        );<br>
+        <br>
     </div>
 
     <div id="descricao">
@@ -238,6 +246,7 @@
             <b>Banco de Dados</b><br>
             - Alteramos o campo login da tabela login de varchar(15) para varchar (40)<br>
             - Adicionamos o campo apelido na tabela perfil<br>
+            - Foi criada a tabela enturmando, para fazer a relação de cada perfil à sua turma<br>
             <br>
             <b>Front-end</b><br>
             - Criação da interface 'feed.html'<br>
