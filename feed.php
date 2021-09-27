@@ -29,7 +29,7 @@
                             <a href="feed.html" class="one"><img src="icons/house.svg" alt=""></a>
                             <a href="#" class="two"><img src="icons/gear-wide.svg" alt=""></a>
                             <a href="#" class="three"><img src="icons/door-open-fill.svg" alt=""></a>
-                            <a href="perfil.html" class="four"><img src="assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt=""></a>
+                            <a href="perfil.php" class="four"><img src="assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt=""></a>
         </div>
     </nav>
 <!--fim da barra de navegação!-->
