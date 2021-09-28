@@ -1,4 +1,4 @@
-$(document).ready(function(){
++$(document).ready(function(){
 
     $('#login').click(function(){
         var dados = $('#dados_login').serialize();
