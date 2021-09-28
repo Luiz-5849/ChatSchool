@@ -17,9 +17,11 @@ if ($comando->execute())
 			$comandoII->bindParam(1,$cod_post);
 			$comandoII->execute();
 			while($linhaII = $comandoII->fetch(PDO::FETCH_OBJ)){
-				echo $linhaII->cod_imagem . '<br>';
+				echo '<div class="col-3">
+						<img class="card-img-top" src="data:image/jpg;base64,' . base64_encode($linhaII->imagem) . '">
+					</div>';
 			}
-
+			
 		}
 	}
 	else{
