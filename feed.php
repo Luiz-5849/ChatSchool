@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,9 +27,9 @@
                 </ul>
                     <ul class="nav justify-content-end col-4">
                         <li class="nav-item">
-                            <a href="feed.php" class="one"><img src="icons/house.svg" alt=""></a>
+                            <a href="feed.html" class="one"><img src="icons/house.svg" alt=""></a>
                             <a href="#" class="two"><img src="icons/gear-wide.svg" alt=""></a>
-                            <a href="cruds/deslogar.php" class="three"><img src="icons/door-open-fill.svg" alt=""></a>
+                            <a href="#" class="three"><img src="icons/door-open-fill.svg" alt=""></a>
                             <a href="perfil.php" class="four"><img src="assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt=""></a>
         </div>
     </nav>
@@ -42,13 +43,13 @@
                 <div class="imagem">
                     <img src="assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt="">
                 </div>
-                    <h1>Mikael Lucas</h1>
+                   <h1>Gabriel Ribeiro</h1>
             </div>
             <form action="" class="textPost">
                 <textarea name="textarea" placeholder="Faça uma publicação:"></textarea>
                 <div class="navegacao">
                     <div class="icons">
-                        <button class="btnfileForm"><img src="icons/" alt=""></button>
+                        <button class="btnfileForm"><img src="icons/image-fill.svg" alt=""></button>
                     </div>
                     <button type="submit" class="btn">Postar</button>
                 </div>
@@ -62,17 +63,16 @@
         <div class="post">
             <div class="infoPost">
                 <div class="imgPost">
-                    <img src="" alt="">
+                    <img src="assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt="">
                 </div>
-                <div class="nameInfo">
-                    <h1>Mikael Lucas</h1>
-                    <p>15h</p>
-                </div>          
+            
+                <h1>Mikael Lucas</h1>
+        
             </div>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             <div class="actionButton">
-                <button type="button" class="filePost"><img src="icons/12138redheart_110427.png" alt="Curtir">Curtir</button>
+                <button type="button" class="filePostheart"><img src="icons/12138redheart_110427.png" alt="Curtir">Curtir</button>
                 <button type="button" class="filePost"><img src="icons/commentlinear_106230.png" alt="Comentar">Comentar</button>
             </div>
         </div>
@@ -82,17 +82,17 @@
         <div class="post">
             <div class="infoPost">
                 <div class="imgPost">
-                    <img src="" alt="">
+                    <img src="assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt="">
                 </div>
-                <div class="nameInfo">
-                    <h1>Mikael Lucas</h1>
-                    <p>15h</p>
-                </div>          
+        
+                    <h1>Henrique Oliveira</h1>
+         
+             
             </div>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             <div class="actionButton">
-                <button type="button" class="filePost"><img src="icons/12138redheart_110427.png" alt="Curtir">Curtir</button>
+                <button type="button" class="filePostheart"><img src="icons/12138redheart_110427.png" alt="Curtir">Curtir</button>
                 <button type="button" class="filePost"><img src="icons/commentlinear_106230.png" alt="Comentar">Comentar</button>
             </div>
         </div>
@@ -102,17 +102,17 @@
         <div class="post">
             <div class="infoPost">
                 <div class="imgPost">
-                    <img src="" alt="">
+                    <img src="assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt="">
                 </div>
-                <div class="nameInfo">
-                    <h1>Mikael Lucas</h1>
-                    <p>15h</p>
-                </div>          
+
+                    <h1>Adriel Montovanni</h1>
+
+                    
             </div>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             <div class="actionButton">
-                <button type="button" class="filePost"><img src="icons/12138redheart_110427.png" alt="Curtir">Curtir</button>
+                <button type="button" class="filePostheart"><img src="icons/12138redheart_110427.png" alt="Curtir">Curtir</button>
                 <button type="button" class="filePost"><img src="icons/commentlinear_106230.png" alt="Comentar">Comentar</button>
             </div>
         </div>
