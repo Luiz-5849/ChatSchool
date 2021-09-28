@@ -3,6 +3,10 @@
 include 'conexao.php';
 session_start();
 
+if($_SESSION['cod_perfil'] == null){
+    header('location:cruds/con_expirou.php');
+}
+
 $cod = $_SESSION['cod_perfil'];
 
 //Comando para puxar o nome e a bio
