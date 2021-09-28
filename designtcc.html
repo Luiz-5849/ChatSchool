@@ -91,6 +91,8 @@
         login varchar(40) not null,<br>
         senha varchar(15) not null,<br>
         acesso int not null<br>
+        cod_perfil int<br>
+        foreign key(cod_perfil) references perfil(cod_perfil);<br>
         );<br>
         <br>
         create table perfil(<br>
@@ -100,8 +102,6 @@
         bio varchar(280) null,<br>
         cod_imagem int null,<br>
         foreign key(cod_imagem) references imagens(cod_imagem),<br>
-        cod_login int not null,<br>
-        foreign key (cod_login) references login(cod_login)<br>
         data_criacao date null<br>
         cod_turma int null,<br>
         foreign key(cod_turma) references turma(cod_turma)<br>
@@ -263,6 +263,23 @@
             - 'perfil.html' alterado para 'perfil.php';<br>
             - Criamos a pasta scrips para armazenar para armazenar os codigos javascript<br>
             - Foi criado o 'login.js' para adicionar javascript no 'login.html'<br> 
+        </div>
+
+        <h1 class="semana">Semana 25/09 -> XX/XX -- V.5</h1>
+        <div class="bd">
+            <br><br>
+            <b>Banco de Dados</b><br>
+            - Remoção do campo cod_login da tabela perfil<br>
+            - Criação do campo cod_perfil na tabela login<br>
+            <br>
+            <b>Front-end</b><br>
+            
+            <br>
+            <b>Back-end</b><br>
+            
+            <br>
+            <b>Correção</b><br>
+            
         </div>
 
     </div>
