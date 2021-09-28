@@ -15,7 +15,7 @@ if (isset($_GET['senha'])) {
 	$senha = addslashes($_GET['senha']);
 }
 
-$comando = $con->prepare("select perfil.cod_perfil, login.acesso, login.cod_login from perfil inner join login on login.cod_login = perfil.cod_login where login.login = ? and login.senha = ? and login.acesso = ?");
+$comando = $con->prepare("select perfil.cod_perfil, login.acesso, login.cod_login from perfil inner join login on login.cod_perfil = perfil.cod_perfil where login.login = ? and login.senha = ? and login.acesso = ?");
 $comando->bindParam(1, $login);
 $comando->bindParam(2, $senha);
 $comando->bindParam(3, $acesso);
