@@ -18,5 +18,6 @@ $(document).ready(function(){
                 $('#result').html("Esse apelido já existe, por favor insira outro");
             }
         })
+        return false;
     })
 });
