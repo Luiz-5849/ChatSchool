@@ -10,6 +10,12 @@ $comando = $con->prepare("select cod_doSeguido from seguidores where cod_perfil 
 $comando->bindParam(1, $cod_perfil);
 $comando->execute();
 
+/* select imagens.imagem, postagens.descricao from postagens
+inner join imagens on imagens.cod_post = postagens.cod_post 
+inner join seguidores on seguidores.cod_doSeguido = postagens.cod_perfil 
+where seguidores.cod_perfil = ? 
+*/
+
 //O if abaixo verificará se o usuário já segue alguém, se ele não seguir ninguém, não aparecerá nenhuma postagem
 if ($comando->rowCount() > 0) {
 
