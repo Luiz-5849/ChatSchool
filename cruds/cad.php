@@ -10,18 +10,30 @@ $senha = $_GET['senha'];
 $nome = $_GET['nome'];
 $apelido = $_GET['apelido'];
 
-$comando = $con->prepare("update login set login = ?, senha = ? where cod_login = ?");
-$comando->bindParam(1, $email);
-$comando->bindParam(2, $senha);
-$comando->bindParam(3, $cod_login);
+$comando = $con->prepare("select * from perfil where apelido = ?");
+$comando->bindParam(1, $apelido);
 $comando->execute();
 
-$comandoII = $con->prepare("update perfil set nome = ?, apelido = ? where cod_perfil = ?");
-$comandoII->bindParam(1, $nome);
-$comandoII->bindParam(2, $apelido);
-$comandoII->bindParam(3, $cod_perfil);
-$comandoII->execute();
+if ($comando->rowCount() > 0) {
+    $result = "n";
+    echo $result;
+}
+else
+{
+    $comandoI = $con->prepare("update login set login = ?, senha = ? where cod_login = ?");
+    $comandoI->bindParam(1, $email);
+    $comandoI->bindParam(2, $senha);
+    $comandoI->bindParam(3, $cod_login);
+    $comandoI->execute();
 
-header('location:verifica.php');
+    $comandoII = $con->prepare("update perfil set nome = ?, apelido = ? where cod_perfil = ?");
+    $comandoII->bindParam(1, $nome);
+    $comandoII->bindParam(2, $apelido);
+    $comandoII->bindParam(3, $cod_perfil);
+    $comandoII->execute();
+
+    $result = "y";
+    echo $result;
+}
 
 ?>
