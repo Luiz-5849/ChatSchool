@@ -16,6 +16,7 @@ body{
     width: 400px;
     background: white;
     border-radius: 10px;
+    box-shadow: 0px 1px 8px 1px rgba(29, 32, 46, 0.658);
 }
 
 .center h1{

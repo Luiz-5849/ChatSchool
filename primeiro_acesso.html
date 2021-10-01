@@ -14,28 +14,33 @@
     <title>Primeiro Acesso</title>
 </head>
 <body>
+
+    <div class="get">
+      <svg class="waves"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2691d9" fill-opacity="1" d="M0,64L48,69.3C96,75,192,85,288,101.3C384,117,480,139,576,128C672,117,768,75,864,53.3C960,32,1056,32,1152,64C1248,96,1344,160,1392,192L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    </div>
+
     <form class="row g-3 container" id="form" action="" method="get">
-        <div class="title">É sua primeira vez no ChatSchool?</div>
-        <div><p id="">Precisamos que você insira alguns dados</p></div>
-        <div class="col-md-6">
-          <label for="inputEmail4" class="form-label name-label">Email</label>
+        <div class="title">É sua primeira vez no <span>ChatSchool?</span></div>
+        <div class="text"><p id="">Precisamos que você insira alguns dados!</p></div>
+        <div class="col-md-6 form">
+          <label for="inputEmail4" class="form-label name-label value">Email</label>
           <input type="email" class="form-control input-me" id="inputEmail4" name="email">
         </div>
-        <div class="col-md-6">
-          <label for="inputPassword4" class="form-label">Senha</label>
+        <div class="col-md-6 form">
+          <label for="inputPassword4" class="form-label value">Senha</label>
           <input type="password" class="form-control" id="inputPassword4" name="senha">
         </div>
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">Nome</label>
+        <div class="col-12 form">
+          <label for="inputAddress" class="form-label value">Nome</label>
           <input type="text" class="form-control" id="inputAddress" placeholder="" name="nome">
         </div>
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">Apelido</label>
+        <div class="col-12 form">
+          <label for="inputAddress" class="form-label value">Apelido</label>
           <input type="text" class="form-control" id="inputAddress" placeholder="" name="apelido">
         </div>
         <div id="result"></div>
-        <div class="col-12">
-          <button type="submit" id="cadastrar" class="btn btn-primary">Inserir Dados</button>
+        <div class="col-12 form">
+          <button type="submit" id="cadastrar" class="btn btn-primary button value">Inserir Dados</button>
         </div>
       </form>
 </body>

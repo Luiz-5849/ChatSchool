@@ -12,7 +12,14 @@ body{
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background: linear-gradient( #0b2555, #2691d9);
+    background: #172236;
+}
+
+.waves{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .container{
@@ -21,11 +28,39 @@ body{
     background: #fff;
     padding: 25px 30px;
     border-radius: 8px;
+    z-index: 1;
+    box-shadow: 0px 1px 8px 1px rgba(29, 32, 46, 0.658);
 }
 
 .container .title{
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 700;
     position: relative;
+    text-decoration: underline 2px #e0e3e6;
+}
+
+.container .text p{
+    font-size: 16px;
+    font-weight: 500;
     text-decoration: underline 2px #2691d9;
+}
+
+.container .title span{
+    color: #77BDD9;
+}
+
+.button{
+    font-weight: 400;
+    background-color: #2691d9;
+    border: 0;
+}
+
+.button:hover{
+    transition: 0.2s;
+    background-color: #dbdbdb73;
+    color: #2691d9;
+}
+
+.form label{
+    font-weight: 600;
 }
