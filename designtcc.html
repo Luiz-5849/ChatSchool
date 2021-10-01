@@ -119,8 +119,6 @@
         cod_post int primary key auto_increment,<br>
         cod_perfil int not null,<br>
         foreign key(cod_perfil) references perfil(cod_perfil),<br>
-        cod_imagem int not null,<br>
-        foreign key(cod_imagem) references imagens(cod_imagem),<br>
         descricao_post varchar(70) null,<br>
         data_post date not null,<br>
         hora_post time not null<br>
@@ -171,7 +169,9 @@
         <br>
         create table imagens(<br>
         cod_imagem int primary key auto_increment,<br>
-        imagem binary null<br>
+        imagem binary null,<br>
+        cod_post int,<br>
+        foreign key (cod_post) references postagens (cod_post)<br>
         );<br>
         <br>
         create table mensagens(<br>
@@ -278,6 +278,8 @@
             - Remoção do campo cod_login da tabela perfil<br>
             - Criação do campo cod_perfil na tabela login<br>
             - Criação da tabela escolas<br>
+            - Exclusão do campo cod_imagem na tabela postagens<br>
+            - Inserção do campo cod_post na tabela imagem<br>
             <br>
             <b>Front-end</b><br>
             
