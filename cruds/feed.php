@@ -21,7 +21,7 @@ if ($comando->rowCount() > 0) {
 
     while ($linha = $comando->fetch(PDO::FETCH_OBJ)) {
         $cod_doSeguido = $linha->cod_doSeguido;
-        $comandoII = $con->prepare("select cod_post, descricao_post from postagens where cod_perfil = ?");
+        $comandoII = $con->prepare("select cod_post, descricao_post from postagens order by data_post desc where cod_perfil = (select cod_doSeguido from seguidores where cod_perfil = ?)");
         $comandoII->bindParam(1, $cod_doSeguido);
         $comandoII->execute();
 
