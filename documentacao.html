@@ -101,11 +101,11 @@
         bio varchar(280) null,<br>
         cod_imagem int null,<br>
         foreign key(cod_imagem) references imagens(cod_imagem),<br>
-        data_criacao date null<br>
+        data_criacao date null,<br>
         cod_turma int null,<br>
         foreign key(cod_turma) references turma(cod_turma),<br>
         cod_login int not null,<br>
-        foreign ker(cod_login) references login(cod_login)<br>
+        foreign key(cod_login) references login(cod_login)<br>
         );<br>
         <br>
         create table seguidores(<br>
