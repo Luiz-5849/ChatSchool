@@ -22,6 +22,11 @@ if ($saida->nome == null || $saida->nome == "") {
 } 
 else
 {
+	//$comandoII = $con->prepare("select perfil.cod_perfil from perfil inner join login on perfil.cod_login = login.cod_login where login.cod_login = ?");
+	//$comandoII->bindParam(1, $cod_login);
+	//$comandoII->execute();
+	//$saidaII = $comandoII->fetch(PDO::FETCH_OBJ);
+	//$_SESSION['cod_perfil'] = $saidaII->cod_perfil;
 	switch($acesso)
        	{
 	        case 1:
