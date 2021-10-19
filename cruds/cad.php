@@ -34,6 +34,12 @@ else
     $comandoII->bindParam(3, $cod_perfil);//X
     $comandoII->execute();
 
+    //$comandoIII = $con->prepare("select cod_perfil from perfil where apelido = ?");
+    //$comandoIII->bindParam(1, $apelido);
+    //$comandoIII->execute();
+    //$saida = $comandoIII->fetch(PDO::FETCH_OBJ);
+    //$_SESSION['cod_perfil'] = $saida->cod_perfil;
+
     $result = "y";
     echo $result;
 }
