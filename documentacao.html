@@ -90,9 +90,7 @@
         cod_login int primary key auto_increment,<br>
         login varchar(40) not null,<br>
         senha varchar(15) not null,<br>
-        acesso int not null,<br>
-        cod_perfil int not null,<br>
-        foreign key(cod_perfil) references perfil(cod_perfil)<br>
+        acesso int not null<br>
         );<br>
         <br>
         create table perfil(<br>
@@ -104,7 +102,9 @@
         foreign key(cod_imagem) references imagens(cod_imagem),<br>
         data_criacao date null<br>
         cod_turma int null,<br>
-        foreign key(cod_turma) references turma(cod_turma)<br>
+        foreign key(cod_turma) references turma(cod_turma),<br>
+        cod_login int not null,<br>
+        foreign ker(cod_login) references login(cod_login)<br>
         );<br>
         <br>
         create table seguidores(<br>
