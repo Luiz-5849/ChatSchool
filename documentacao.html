@@ -90,7 +90,8 @@
         cod_login int primary key auto_increment,<br>
         login varchar(40) not null,<br>
         senha varchar(15) not null,<br>
-        acesso int not null<br>
+        acesso int not null,<br>
+        primeiro_acesso int not null<br>
         );<br>
         <br>
         create table perfil(<br>
@@ -278,15 +279,19 @@
             - Criação da tabela escolas<br>
             - Exclusão do campo cod_imagem na tabela postagens<br>
             - Inserção do campo cod_post na tabela imagem<br>
+            - Inserção do campo primeiro_acesso na tabela login<br>
             <br>
             <b>Front-end</b><br>
             
             <br>
             <b>Back-end</b><br>
             - Criação do 'option_escola.php', código responsável por listar as escolas cadastradas na rede social<br>
+            - Criação do 'feed.php', código responsável por carregar no feed as postagens das pessoas que o usuário segue<br>
             <br>
             <b>Correção</b><br>
-            
+            - O nome da tela de documentação foi alterado de 'designtcc.html' para 'documentacao.html'<br>
+            - O nome do código 'cad.php' foi alterado para 'primeiro_acesso.php'<br>
+            - Algumas correções foram feitas nos códigos 'valida_login.php', 'verifica.php', 'primeiro_acesso.php' devido a algumas alterações do BD<br>
         </div>
 
     </div>
