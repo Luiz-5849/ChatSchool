@@ -5,7 +5,7 @@ $(document).ready(function(){
 
         $.ajax ({
             method: 'GET',
-            url: 'cruds/cad.php',
+            url: 'cruds/primeiro_acesso.php',
             data: dados,
         })
 
