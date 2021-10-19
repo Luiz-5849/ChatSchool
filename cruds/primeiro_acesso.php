@@ -20,6 +20,7 @@ if ($comando->rowCount() > 0) {
 }
 else
 {
+    //$comandoI = $con->prepare("update login set login = ?, senha = ?, primeiro_acesso = 1 where cod_login = ?")
     $comandoI = $con->prepare("update login set login = ?, senha = ? where cod_login = ?");
     $comandoI->bindParam(1, $email);
     $comandoI->bindParam(2, $senha);
