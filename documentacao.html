@@ -149,7 +149,9 @@
         create table turma(<br>
         cod_turma int primary key auto_increment,<br>
         curso varchar(15) not null,<br>
-        periodo varchar(5) not null<br>
+        periodo varchar(5) not null,<br>
+        cod_escola int not null,<br>
+        foreign key (cod_escola) references escolas(cod_escola)<br>
         );<br>
         <br>
         create table escolas(<br>
@@ -283,6 +285,7 @@
             - Inserção do campo primeiro_acesso na tabela login<br>
             - Campo imagem da tabela imagens alterado para tipo <i>blob not null</i><br>
             - Inserção do campo nome_imagem na tabela imagens<br>
+            - Inserção do campo cod_escola na tabela turmas<br>
             <br>
             <b>Front-end</b><br>
             
