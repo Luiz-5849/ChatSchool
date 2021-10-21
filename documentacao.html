@@ -170,7 +170,7 @@
         <br>
         create table imagens(<br>
         cod_imagem int primary key auto_increment,<br>
-        imagem binary null,<br>
+        imagem blob not null,<br>
         cod_post int,<br>
         foreign key (cod_post) references postagens (cod_post)<br>
         );<br>
@@ -280,6 +280,7 @@
             - Exclusão do campo cod_imagem na tabela postagens<br>
             - Inserção do campo cod_post na tabela imagem<br>
             - Inserção do campo primeiro_acesso na tabela login<br>
+            - Campo imagem da tabela imagens alterado para tipo <i>blob not null</i><br>
             <br>
             <b>Front-end</b><br>
             
