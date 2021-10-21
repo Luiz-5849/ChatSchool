@@ -224,3 +224,20 @@ div.actionButton button.filePost{
     font-size: 15px;
     background-color: #1a72ac;
 }
+
+div.accordion{
+    margin-top: 45px;
+}
+
+div.accordion-body p{
+    font-weight: 600;
+    font-size: 15px;
+}
+
+div.icons{
+    padding: 5px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    background: #1a72ac;
+    color:white;
+}

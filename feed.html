@@ -30,14 +30,53 @@
                             <a href="feed.html" class="one"><img src="icons/house.svg" alt=""></a>
                             <a href="#" class="two"><img src="icons/gear-wide.svg" alt=""></a>
                             <a href="cruds/deslogar.php" class="three"><img src="icons/door-open-fill.svg" alt=""></a>
-                            <a href="perfil.php" class="four"><img src="assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt=""></a>
+                            <a href="perfil.html" class="four"><img src="assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt=""></a>
         </div>
     </nav>
 <!--fim da barra de navegação!-->
 
-
 <!--Postagem do feed-->
     <main class="main">
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Comunicados para Escola
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Para Sala
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Comunicados pessoais
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+
         <div class="post">
             <div class="infousuario">
                 <div class="imagem">
@@ -49,9 +88,8 @@
                 <textarea name="textarea" placeholder="Faça uma publicação:" id="textarea"></textarea>
                 <div class="navegacao">
                     <div class="icons">
-                        <button class="btnfileForm"><img src="icons/images.svg" alt=""></button>
+                      <input type="file" name="arquivo" enctype="multipart/form-data" id="">
                     </div>
-                    <button type="submit" class="btn">Postar</button>
                 </div>
             </form>
         </div>
