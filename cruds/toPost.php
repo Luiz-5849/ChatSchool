@@ -6,16 +6,15 @@ session_start();
 $cod = $_SESSION['cod_perfil'];
 $descricao = $_GET['textarea'];
 
-if (!(isset($_FILES['arquivo']['name']))) {
-    $arquivo_atual = $_FILES['arquivo']['name'];
-}
+$arquivo_atual = $_FILES['arquivo']['name'];
+
 
 $comando = $con->prepare("insert into postagens (cod_perfil, descricao, hora_post, data_post) values (?, ?, curtime(), curdate())");
 $comando->bindParam(1, $cod);
 $comando->bindParam(2, $descricao);
 $comando->execute();
 
-if (!(isset($_FILES['arquivo']['name']))) {
+//if (!(isset($_FILES['arquivo']['name']))) {
     $comandoII = $con->prepare("select max(cod_post) from postagens where cod_perfil = ?");
     $comandoII->bindParam(1, $cod);
     $comandoII->execute();
@@ -27,4 +26,6 @@ if (!(isset($_FILES['arquivo']['name']))) {
     $comandoIII->bindParam(1, $imagem);
     $comandoIII->bindParam(2, $arquivo_atual);
     $comandoIII->execute();
-}
+
+    header('location:../feed.html');
+//}
