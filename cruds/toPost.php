@@ -15,7 +15,7 @@ $comando->bindParam(1, $cod);
 $comando->bindParam(2, $descricao);
 $comando->execute();
 
-if (condition) {
+if (!(isset($_FILES['arquivo']['name']))) {
     $comandoII = $con->prepare("select max(cod_post) from postagens where cod_perfil = ?");
     $comandoII->bindParam(1, $cod);
     $comandoII->execute();

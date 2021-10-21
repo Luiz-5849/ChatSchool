@@ -10,7 +10,7 @@ $(document).ready(function(){
         })
 
         .done(function(){
-            location.href = 'scripts/form.js';
+            
         })
 
         return false;
