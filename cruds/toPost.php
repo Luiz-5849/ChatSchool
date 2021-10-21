@@ -4,10 +4,10 @@ include 'conexao.php';
 session_start();
 
 $cod = $_SESSION['cod_perfil'];
-$descricao = $_GET['descricao'];
+$descricao = $_GET['textarea'];
 
-if (condition) {
-    $arquivo_atual = $_FILES['foto']['name'];
+if (!(isset($_FILES['arquivo']['name']))) {
+    $arquivo_atual = $_FILES['arquivo']['name'];
 }
 
 $comando = $con->prepare("insert into postagens (cod_perfil, descricao, hora_post, data_post) values (?, ?, curtime(), curdate())");
