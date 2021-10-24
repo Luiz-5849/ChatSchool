@@ -6,7 +6,7 @@ session_start();
 $cod_perfil = $_SESSION['cod_perfil'];
 
 //Comando para puxar os códigos dos perfis a quem o usuário segue
-$comando = $con->prepare("select cod_post, descricao_post from postagens order by data_post desc where cod_perfil = (select cod_doSeguido from seguidores where cod_perfil = ?)");
+$comando = $con->prepare("select cod_post, descricao_post from postagens where cod_perfil = (select cod_doSeguido from seguidores where cod_perfil = ?) order by data_post desc");
 $comando->bindParam(1, $cod_perfil);
 $comando->execute();
 
