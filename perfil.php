@@ -85,6 +85,10 @@
                         </li>
                     </ul>
 
+                    <?php
+                    include 'cruds/posts_perfil.php';
+                    ?>
+                    <!--
                     <div class="card-group">
                         <div class="col-3">
                             <img src="assets/seth-doyle-n_t_TjP914o-unsplash.jpg" class="card-img-top" alt="...">
@@ -114,7 +118,7 @@
                           <img src="assets/tyler-nix-SLIwtuPqwfc-unsplash.jpg" class="card-img-top" alt="...">
                         </div>
                       </div>
-
+-->
                 </div>
                 <div class="col-0 col-md-2"></div>
             </div>
