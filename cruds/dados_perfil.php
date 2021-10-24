@@ -3,9 +3,7 @@
 include 'conexao.php';
 session_start();
 
-if($_SESSION['cod_perfil'] == null){
-    header('location:cruds/con_expirou.php');
-}
+include 'cruds/con_expirou.php';
 
 $cod = $_SESSION['cod_perfil'];
 

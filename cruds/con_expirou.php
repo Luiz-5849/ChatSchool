@@ -1,7 +1,7 @@
 <?php
 
-echo "Conexão expirou. Faça login novamente";
-
+if($_SESSION['cod_perfil'] == null){
+    header("location=../con_expirou.html");
+}
 ?>
 
-<html><form action="../login.html"><input type="submit" value="FAZER LOGIN"></form></html>
