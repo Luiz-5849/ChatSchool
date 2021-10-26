@@ -3,7 +3,7 @@
 include 'conexao.php';
 session_start();
 
-include 'cruds/con_expirou.php';
+include '../cruds/con_expirou.php';
 
 $cod = $_SESSION['cod_perfil'];
 
