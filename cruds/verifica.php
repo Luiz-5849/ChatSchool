@@ -26,7 +26,7 @@ else
 	switch($acesso)
        	{
 	        case 1:
-	        header('location:../perfil.php');
+	        header('location:../aluno_professor/perfil.php');
 	            break;
 
 	        case 2:
