@@ -16,8 +16,8 @@ session_start();
     $comando->execute();
 
     if($acesso_user == 3){
-    header("location:../adm_co.html");
+    header("location:../coordenador/adm_co.html");
     }elseif($acesso_user == 4){
-    header("location:../administrativa.html");
+    header("location:../programador/administrativa.html");
     }
 ?>
