@@ -21,7 +21,7 @@
             <option selected value="0">Escola</option>
             <option value="0">- -</option>
             <?php
-                include 'cruds/option_escola.php';
+                include '../cruds/option_escola.php';
             ?>
         </select>
 
