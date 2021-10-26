@@ -34,7 +34,7 @@ else
 	            break;
 
 	        case 3:
-	        header('location:../perfil.php');
+	        header('location:../adm_co.php');
 	            break;
 
 	        case 4:
