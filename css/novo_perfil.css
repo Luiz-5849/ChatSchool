@@ -21,6 +21,86 @@ body{
     box-shadow: 0px 1px 8px 1px rgba(29, 32, 46, 0.658);
 }
 
+.center h1{
+    cursor: context-menu;
+    margin-top: 1.5rem;
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+    color: #172236;
+    text-decoration: underline #2691d9;
+    font-weight: 700;
+}
+
+.center img{
+    width: 30%;
+    margin-top: 8px;
+}
+
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+
+.pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.pass:hover{
+    text-decoration: underline;
+}
+
 input[type="submit"]{
     width: 100%;
     height: 50px;
@@ -32,7 +112,6 @@ input[type="submit"]{
     font-weight: 700;
     cursor: pointer;
     outline: none;
-    margin-top: 40px;
 }
 
 input[type="submit"]:hover{
@@ -40,23 +119,3 @@ input[type="submit"]:hover{
     transition: .5s;
 }
 
-.txt_fild label{
-    font-size: 20px;
-    font-weight: 600;
-    margin-left: 10px;
-    text-decoration: underline #2691d9 2px;
-}
-
-.txt_fild input{
-    padding: 5px 20px;
-    margin-top: 2rem;
-    border-color: #03141f;
-    outline: none;
-    border-style: solid;
-    border-radius: 25px;
-    margin-left: 5px;
-}
-
-.form_select{
-    margin-top: 2rem;
-}
