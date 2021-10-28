@@ -101,34 +101,16 @@
 
 
 <!--Feed--> 
-    <div class="postagens" id="postFeed">
-        <div class="post">
-            <div class="infoPost">
-                <div class="imgPost">
-                    <img src="../assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt="">
-                </div>
-            
-                <h1>Mikael Lucas</h1>
-                <p>12h</p>
-                
+    
               <?php
               include '../cruds/posts_feed.php';
               ?>
 
-            </div>
-            <p>
-              <?php echo $descricao; ?>
-            </p>
-            <div class="actionButton">
-                <button type="button" class="filePostheart"><img src="../icons/12138redheart_110427.png" alt="Curtir">Curtir</button>
-                <button type="button" class="filePost"><img src="../icons/commentlinear_106230.png" alt="Comentar">Comentar</button>
-            </div>
-        </div>
-    </div> 
+           
 <!--Fim do Feed-->
     </main>
     
-    <!--<script type="module" src="../scripts/form.js"></script>-->
+    <script type="module" src="../scripts/form.js"></script>
 
 </body>
 </html>

@@ -30,7 +30,7 @@
                 <a href="feed.php" class="one"><img src="../icons/house.svg" alt=""></a>
                 <a href="#" class="two"><img src="../icons/gear-wide.svg" alt=""></a>
                 <a href="../cruds/deslogar.php" class="three"><img src="../icons/door-open-fill.svg" alt=""></a>
-                <a href="perfil.php" class="four"><img src="../assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt=""></a>
+                <a href="perfil.php" class="four"><img src="../imagens/<?php echo $imagem; ?>" alt=""></a>
             </div>
         </div>
     </nav>
@@ -42,7 +42,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-3">
-                                <img class="perfil" src="../assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt="">
+                                <img class="perfil" src="../imagens/<?php echo $imagem; ?>" alt="">
                             </div>
                             <div class="col-7">
                                 <div class="row">
@@ -52,13 +52,13 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-4">
-                                        <p class="profile-datas"><strong>132</strong> publicações</p>
+                                        <p class="profile-datas"><strong><?php echo $publicacoes; ?></strong> publicações</p>
                                     </div>
                                     <div class="col-4">
-                                        <p class="profile-datas"><strong>5.300</strong> seguidores</p>
+                                        <p class="profile-datas"><strong><?php echo $seguidores; ?></strong> seguidores</p>
                                     </div>
                                     <div class="col-4">
-                                        <p class="profile-datas"><strong>667</strong > seguindo</p>
+                                        <p class="profile-datas"><strong><?php echo $seguindo; ?></strong > seguindo</p>
                                     </div>
                                 </div>
                                 <div class="row">
