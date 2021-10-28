@@ -20,14 +20,14 @@
     <nav class="navbar navbar-light bg-light nav-top">
         <div class="container nav-container">
           <a class="navbar-brand" href="#">
-            <a href="feed.html"><img src="../assets/logo.png" alt=""></a>
+            <a href="feed.php"><img src="../assets/logo.png" alt=""></a>
           </a>
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1">
         </form>
         
             <div class="icons">
-                <a href="feed.html" class="one"><img src="../icons/house.svg" alt=""></a>
+                <a href="feed.php" class="one"><img src="../icons/house.svg" alt=""></a>
                 <a href="#" class="two"><img src="../icons/gear-wide.svg" alt=""></a>
                 <a href="../cruds/deslogar.php" class="three"><img src="../icons/door-open-fill.svg" alt=""></a>
                 <a href="perfil.php" class="four"><img src="../assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt=""></a>
