@@ -13,26 +13,44 @@ $comandoI->bindParam(1, $cod);
 $comandoI->execute();
 $dadosI = $comandoI->fetch(PDO::FETCH_OBJ);
 $nome = $dadosI->apelido;
-$bio = $dadosI->bio;
-
+if ($dadosI->bio == null || $dadosI->bio == "") {
+    $bio = '<a class="">Sem mensagem de perfil</a>';
+}else{
+    $bio = $dadosI->bio;
+}
 
 //comando para puxar a quantidade de publicações
 $comandoII = $con->prepare("select cod_post from postagens where cod_perfil = ?");
 $comandoII->bindParam(1, $cod);
 $comandoII->execute();
-$publicacoes = $comandoII->rowCount();
+if ($comandoII->rowCount() > 0) {
+    $publicacoes = $comandoII->rowCount();
+}else{
+    $publicacoes = 0;
+}
 
 //Comando para puxar o numero de pessoas que o usuário está seguindo
 $comandoIII = $con->prepare("select * from seguidores where cod_perfil = ?");
 $comandoIII->bindParam(1, $cod);
 $comandoIII->execute();
-$seguindo = $comandoIII->rowCount();
+if ($comandoIII->rowCount() > 0) {
+    $seguindo = $comandoIII->rowCount();
+}else{
+    $seguindo = 0;
+}
+
+
 
 //Comando para puxar o numero de seguidores
 $comandoIV = $con->prepare("select * from seguidores where cod_doSeguido = ?");
 $comandoIV->bindParam(1, $cod);
-$comandoIV->execute();
-$seguidores = $comandoIV->rowCount();
+$comandoIV->execute(); 
+if ($comandoIV->rowCount() > 0) {
+    $seguidores = $comandoIV->rowCount();
+}else{
+    $seguidores = 0;
+}
+
 
 
 //Comando para puxar a foto do perfil
