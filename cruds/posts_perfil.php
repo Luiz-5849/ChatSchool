@@ -20,6 +20,7 @@ if ($comando->execute())
 
 			if ($comandoII->rowCount() > 1) 
 			{	//Comando para fazer carrossel de imagens
+				
 				while($linhaII = $comandoII->fetch(PDO::FETCH_OBJ))
 				{
 					echo '<div class="col-3">
@@ -30,7 +31,7 @@ if ($comando->execute())
 			else
 			{   //Comando para inserir a imagem se houver apenas uma no post
 				$img = $comandoII->fetch(PDO::FETCH_OBJ);
-				echo '<div class="col-3"><img src="imagens/' . $img->nome_imagem . '"></div>';
+				echo '<div class="col-3"><img src="../imagens/' . $img->nome_imagem . '"></div>';
 			}
 		}
 	}

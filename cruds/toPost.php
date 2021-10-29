@@ -27,10 +27,11 @@ if (isset($_FILES['arquivo']['name'])) {
     $saida = $comandoII->fetch(PDO::FETCH_OBJ);
     $cod_post = $saida->cod_post;
 
-    $imagem = file_get_contents("https://localhost/ChatSchool/imagens/" . $arquivo_atual);
-    $comandoIII = $con->prepare("insert into imagens (imagem, nome_imagem, cod_post) values (?, ?, ?)");
-    $comandoIII->bindParam(1, $imagem);
-    $comandoIII->bindParam(2, $arquivo_atual);
-    $comandoIII->bindParam(3, $cod_post);
+    //$imagem = file_get_contents("https://localhost/ChatSchool/imagens/" . $arquivo_atual);
+    $comandoIII = $con->prepare("insert into imagens (nome_imagem, cod_post) values (?, ?)");
+    //$comandoIII->bindParam(1, $imagem);
+    $comandoIII->bindParam(1, $arquivo_atual);
+    $comandoIII->bindParam(2, $cod_post);
     $comandoIII->execute();
 }
+header('location:../aluno_professor/feed.php');

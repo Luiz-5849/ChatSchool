@@ -3,21 +3,21 @@
 include 'conexao.php';
 session_start();
 
-include 'cruds/con_expirou.php';
+include '../cruds/con_expirou.php';
 
 $cod = $_SESSION['cod_perfil'];
 
 //Comando para puxar o nome e a bio
-$comandoI = $con->prepare("select nome, bio from perfil where cod_perfil = ?");
+$comandoI = $con->prepare("select apelido, bio from perfil where cod_perfil = ?");
 $comandoI->bindParam(1, $cod);
 $comandoI->execute();
 $dadosI = $comandoI->fetch(PDO::FETCH_OBJ);
-$nome = $dadosI->nome;
+$nome = $dadosI->apelido;
 $bio = $dadosI->bio;
 
-/*
+
 //comando para puxar a quantidade de publicações
-$comandoII = $con->prepare("select * from postagens where cod_perfil = ?");
+$comandoII = $con->prepare("select cod_post from postagens where cod_perfil = ?");
 $comandoII->bindParam(1, $cod);
 $comandoII->execute();
 $publicacoes = $comandoII->rowCount();
@@ -34,11 +34,16 @@ $comandoIV->bindParam(1, $cod);
 $comandoIV->execute();
 $seguidores = $comandoIV->rowCount();
 
+
 //Comando para puxar a foto do perfil
-$comandoV = $con->prepare("select imagens.imagem from imagens inner join perfil on perfil.cod_imagem = imagens.cod_imagem where perfil.cod_perfil = ?");
+$comandoV = $con->prepare("select imagens.nome_imagem from imagens inner join perfil on perfil.cod_imagem = imagens.cod_imagem where perfil.cod_perfil = ?");
 $comandoV->bindParam(1, $cod);
 $comandoV->execute();
-$dados = $comandoV->fetch(PDO::FETCH_OBJ);
-$imagem = $dados->imagem;*/
+if($comandoV->rowCount()>0){
+    $dados = $comandoV->fetch(PDO::FETCH_OBJ);
+    $imagem = $dados->nome_imagem;
+}else{
+    $imagem = "blank-profile-picture-973460__480.png";
+}
 
 ?>

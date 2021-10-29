@@ -8,17 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="javascript" href="">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/novo_perfil.css">
     <script type="text/javascript" src="scripts/login.js"></script>
-    <title>Entre - Login</title>
+    <title>Document</title>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo"><img src="assets/logo.png" alt=""></a>
-        <!--<a href="acessofree.html" class="nav">Primeiro acesso</a>-->
-    </header>
     <div class="center">
-        <h1>Login</h1>
+        <h1>Cadastrar</h1>
+        <form action="../cruds/novo_perfil.php" method="post"></form>
         <form method="get" action="" id="dados_login">
             <select class="form-select" aria-label="Default select example" name="acesso">
                 <option selected>Selecione</option>
@@ -28,27 +25,18 @@
                 <option value="4">Programadores</option>
               </select>
             <div class="txt_field">
-                <input type="text" name="email" required>
+                <input type="email" name="email" required id="email">
                 <span></span>
                 <label>Email</label>
             </div>
             <div class="txt_field">
-                <input type="password" name="senha" required>
+                <input type="password" name="senha" required id="senha">
                 <span></span>
                 <label>Senha</label>
             </div>
-            <div class="pass">Esqueci minha senha?</div>
-            <input type="submit" value="Login" id="login" href="">
-            <div class="signup_link">
-               Bem Vindo(a)
-            </div>
+            <input type="submit" value="Enviar">
+            <hr>
         </form>
-    </div>
-
-    <div class="circle"></div>
-    <div class="button">
-        <a href="documentacao.html">Documentação</a>
     </div>
 </body>
 </html>
-

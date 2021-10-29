@@ -34,7 +34,7 @@ export class FormPost {
                 newPost.innerHTML = ` 
                 <div class="infoPost">
                     <div class="imgPost">
-                        <img src="assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt="">
+                        <img src="../assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt="">
                     </div>
             
                     <h1>Mikael Lucas</h1>
@@ -45,8 +45,8 @@ export class FormPost {
                         ${this.textarea.value}
                     </p>
                         <div class="actionButton">
-                            <button type="button" class="filePostheart"><img src="icons/12138redheart_110427.png" alt="Curtir">Curtir</button>
-                            <button type="button" class="filePost"><img src="icons/commentlinear_106230.png" alt="Comentar">Comentar</button>
+                            <button type="button" class="filePostheart"><img src="../icons/12138redheart_110427.png" alt="Curtir">Curtir</button>
+                            <button type="button" class="filePost"><img src="../icons/commentlinear_106230.png" alt="Comentar">Comentar</button>
                         </div>
                 `;
 

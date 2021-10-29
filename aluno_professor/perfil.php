@@ -8,10 +8,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="../css/perfil.css">
     <?php
 
-    include 'cruds/dados_perfil.php';
+    include '../cruds/dados_perfil.php';
 
     ?>
     <title>PERFIL</title>
@@ -20,16 +20,17 @@
     <nav class="navbar navbar-light bg-light nav-top">
         <div class="container nav-container">
           <a class="navbar-brand" href="#">
-            <a href="feed.html"><img src="assets/logo.png" alt=""></a>
+            <a href="feed.php"><img src="../assets/logo.png" alt=""></a>
           </a>
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1">
         </form>
+        
             <div class="icons">
-                <a href="feed.html" class="one"><img src="icons/house.svg" alt=""></a>
-                <a href="#" class="two"><img src="icons/gear-wide.svg" alt=""></a>
-                <a href="cruds/deslogar.php" class="three"><img src="icons/door-open-fill.svg" alt=""></a>
-                <a href="perfil.php" class="four"><img src="assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt=""></a>
+                <a href="feed.php" class="one"><img src="../icons/house.svg" alt=""></a>
+                <a href="#" class="two"><img src="../icons/gear-wide.svg" alt=""></a>
+                <a href="../cruds/deslogar.php" class="three"><img src="../icons/door-open-fill.svg" alt=""></a>
+                <a href="perfil.php" class="four"><img src="../imagens/<?php echo $imagem; ?>" alt=""></a>
             </div>
         </div>
     </nav>
@@ -41,7 +42,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-3">
-                                <img class="perfil" src="assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt="">
+                                <img class="perfil" src="../imagens/<?php echo $imagem; ?>" alt="">
                             </div>
                             <div class="col-7">
                                 <div class="row">
@@ -51,13 +52,13 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-4">
-                                        <p class="profile-datas"><strong>132</strong> publicações</p>
+                                        <p class="profile-datas"><strong><?php echo $publicacoes; ?></strong> publicações</p>
                                     </div>
                                     <div class="col-4">
-                                        <p class="profile-datas"><strong>5.300</strong> seguidores</p>
+                                        <p class="profile-datas"><strong><?php echo $seguidores; ?></strong> seguidores</p>
                                     </div>
                                     <div class="col-4">
-                                        <p class="profile-datas"><strong>667</strong > seguindo</p>
+                                        <p class="profile-datas"><strong><?php echo $seguindo; ?></strong > seguindo</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -85,6 +86,10 @@
                         </li>
                     </ul>
 
+                    <?php
+                    include '../cruds/posts_perfil.php';
+                    ?>
+                    <!--
                     <div class="card-group">
                         <div class="col-3">
                             <img src="assets/seth-doyle-n_t_TjP914o-unsplash.jpg" class="card-img-top" alt="...">
@@ -114,7 +119,7 @@
                           <img src="assets/tyler-nix-SLIwtuPqwfc-unsplash.jpg" class="card-img-top" alt="...">
                         </div>
                       </div>
-
+-->
                 </div>
                 <div class="col-0 col-md-2"></div>
             </div>

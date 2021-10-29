@@ -26,19 +26,19 @@ else
 	switch($acesso)
        	{
 	        case 1:
-	        header('location:../perfil.php');
+	        header('location:../aluno_professor/perfil.php');
 	            break;
 
 	        case 2:
-	        header('location:../perfil.php');
+	        header('location:../aluno_professor/perfil.php');
 	            break;
 
 	        case 3:
-	        header('location:../perfil.php');
+	        header('location:../coordenador/adm_co.php');
 	            break;
 
 	        case 4:
-	        header('location:../administrativa.html');
+	        header('location:../programador/administrativa.html');
 	        break;
         }
 }

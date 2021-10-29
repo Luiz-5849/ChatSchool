@@ -5,3 +5,26 @@
     font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased !important;
 }
+
+.waves{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.imgHome{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    margin-top: 50px;
+}
+
+.imgHome img{
+    max-width: 700px;
+    z-index: 1;
+    margin-right: 15px;
+}
+
