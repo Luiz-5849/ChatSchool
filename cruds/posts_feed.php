@@ -4,7 +4,6 @@ include 'conexao.php';
 
 $cod_perfil = $_SESSION['cod_perfil'];
 
-include '../cruds/con_expirou.php';
 
 //Comando para puxar os códigos dos perfis a quem o usuário segue
 $comando = $con->prepare("select postagens.cod_post, postagens.descricao_post, perfil.apelido, perfil.cod_imagem from postagens inner join perfil on postagens.cod_perfil = perfil.cod_perfil 

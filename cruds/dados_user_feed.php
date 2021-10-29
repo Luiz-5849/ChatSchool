@@ -1,6 +1,7 @@
 <?php
 
 include 'conexao.php';
+include '../cruds/con_expirou.php';
 
 $cod = $_SESSION['cod_perfil'];
 
