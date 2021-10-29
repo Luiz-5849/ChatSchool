@@ -12,7 +12,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>ChatSchool</title>
     <?php
-    session_start();
+      session_start();
+      include '../cruds/dados_user_feed.php';
     ?>
 </head>
 <body>
@@ -33,14 +34,14 @@
                             <a href="feed.html" class="one"><img src="../icons/house.svg" alt=""></a>
                             <a href="#" class="two"><img src="../icons/gear-wide.svg" alt=""></a>
                             <a href="../cruds/deslogar.php" class="three"><img src="../icons/door-open-fill.svg" alt=""></a>
-                            <a href="../aluno_professor/perfil.php" class="four"><img src="../assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt=""></a>
+                            <a href="../aluno_professor/perfil.php" class="four"><img src="../imagens/<?php echo $nome_img_user; ?>" alt=""></a>
         </div>
     </nav>
 <!--fim da barra de navegação!-->
 
-<!--Postagem do feed-->
-    <main class="main">
 
+    <main class="main">
+<!--Comunicados-->
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
@@ -79,13 +80,15 @@
               </div>
             </div>
           </div>
+<!--Fim dos comunicados-->
 
+<!--Postagem do feed-->
         <div class="post">
             <div class="infousuario">
                 <div class="imagem">
-                    <img src="../assets/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg" alt="">
+                    <img src="../imagens/<?php echo $nome_img_user; ?>" alt="">
                 </div>
-                   <h1>Edgar Carvalho</h1>
+                   <h1><?php echo $apelido_user; ?></h1>
             </div>
             <form action="../cruds/toPost.php" enctype="multipart/form-data" class="textPost" id="publiPost" method="post">
                 <textarea name="textarea" placeholder="Faça uma publicação:" id="textarea"></textarea>
