@@ -101,12 +101,9 @@
 
 
 <!--Feed--> 
-    
-              <?php
-              include '../cruds/posts_feed.php';
-              ?>
-
-           
+        <?php
+          include '../cruds/posts_feed.php';
+        ?>
 <!--Fim do Feed-->
     </main>
     
