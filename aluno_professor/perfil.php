@@ -63,13 +63,9 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
-                                        <h1 class="name">Student and Performance</h1>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <p class="profile-desc">ETEC JK<br>
-                                        Front-End / UI Design</p>
+                                        <p class="profile-desc">
+                                            <?php echo $bio; ?>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
