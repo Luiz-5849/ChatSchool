@@ -14,7 +14,7 @@ $comandoI->execute();
 $dadosI = $comandoI->fetch(PDO::FETCH_OBJ);
 $nome = $dadosI->apelido;
 if ($dadosI->bio == null || $dadosI->bio == "") {
-    $bio = '<a class="">Sem mensagem de perfil</a>';
+    $bio = '<span class="">Sem mensagem de perfil</span>';
 }else{
     $bio = $dadosI->bio;
 }
