@@ -18,11 +18,12 @@ if($saida->primeiro_acesso == 0) {
 } 
 else
 {
-	$comandoII = $con->prepare("select perfil.cod_perfil from perfil inner join login on perfil.cod_login = login.cod_login where login.cod_login = ?");
+	$comandoII = $con->prepare("select perfil.cod_perfil, perfil.cod_escola from perfil inner join login on perfil.cod_login = login.cod_login where login.cod_login = ?");
 	$comandoII->bindParam(1, $cod_login);
 	$comandoII->execute();
 	$saidaII = $comandoII->fetch(PDO::FETCH_OBJ);
 	$_SESSION['cod_perfil'] = $saidaII->cod_perfil;
+	$_SESSION['cod_escola'] = $saidaII->cod_escola;
 	switch($acesso)
        	{
 	        case 1:
@@ -34,7 +35,7 @@ else
 	            break;
 
 	        case 3:
-	        header('location:../coordenador/adm_co.php');
+	        header('location:../coordenador/adm_co.html');
 	            break;
 
 	        case 4:
