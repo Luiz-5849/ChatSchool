@@ -143,7 +143,8 @@
         <br>
         create table turma(<br>
         cod_turma int primary key auto_increment,<br>
-        curso varchar(15) not null,<br>
+        cod_curso int,<br>
+        foreign key(cod_curso) references cursos(cod_curso),<br>
         periodo varchar(5) not null,<br>
         cod_escola int not null,<br>
         foreign key (cod_escola) references escolas(cod_escola)<br>
@@ -192,6 +193,10 @@
         foreign key (cod_perfil) references perfil(cod_perfil)<br>
         );<br>
         <br>
+        create table cursos(<br>
+        cod_curso int not null primary key auto_increment,<br>
+        nome_curso varchar(50)<br>
+        );<br>
     </div>
 
     <div id="descricao">
