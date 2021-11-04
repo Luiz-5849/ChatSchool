@@ -86,14 +86,6 @@
         <br><br>
         create database bancotcc;<br>
         <br>
-        create table login(<br>
-        cod_login int primary key auto_increment,<br>
-        login varchar(40) not null,<br>
-        senha varchar(15) not null,<br>
-        acesso int not null,<br>
-        primeiro_acesso int not null<br>
-        );<br>
-        <br>
         create table perfil(<br>
         cod_perfil int primary key auto_increment,<br>
         nome varchar(50) null,<br>
@@ -104,10 +96,11 @@
         data_criacao date null,<br>
         cod_turma int null,<br>
         foreign key(cod_turma) references turma(cod_turma),<br>
-        cod_login int not null,<br>
-        foreign key(cod_login) references login(cod_login),<br>
         cod_escola int null,<br>
-        foreign key(cod_escola) references escolas(cod_escola)<br>
+        foreign key(cod_escola) references escolas(cod_escola),<br>
+        login varchar(40) not null,<br>
+        senha varchar(15) not null,<br>
+        acesso int not null<br>
         );<br>
         <br>
         create table seguidores(<br>
@@ -289,6 +282,8 @@
             - Inserção do campo nome_imagem na tabela imagens<br>
             - Inserção do campo cod_escola na tabela turmas<br>
             - Inserção do campo cod_escola na tabela perfil<br>
+            - Campos da tabela login inseridos na tabela perfil<br>
+            - Exclusão da tabela login<br>
             <br>
             <b>Front-end</b><br>
             - Criação de interface para os administradores poderem criar novos perfis<br>
