@@ -18,8 +18,8 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding-right: 10px;
-    margin-top: 50px;
+    padding-right: 15px;
+    margin-top: 40px;
 }
 
 .imgHome img{
@@ -28,3 +28,21 @@
     margin-right: 15px;
 }
 
+.container-fluid a.button{
+    outline: none;
+    padding: 5px 40px;
+    border: none;
+    background-color: #2691d9;
+    border-radius: 25px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.container-fluid a.button:hover{
+    transition: 0.5s;
+    background-color: white;
+    color: #2691d9;
+    text-decoration: underline black;
+}
