@@ -4,26 +4,20 @@ include 'conexao.php';
 session_start();
 
 $acesso = $_SESSION['acesso'];
-$cod_login = $_SESSION['cod_login'];
+$cod_perfil = $_SESSION['cod_perfil'];
 
-$comando = $con->prepare("select primeiro_acesso from login where cod_login = ?");
-$comando->bindParam(1, $cod_login);
+
+$comando = $con->prepare("select apelido from perfil where cod_perfil = ?");
+$comando->bindParam(1, $cod_perfil);
 
 $comando->execute();
-
 $saida = $comando->fetch(PDO::FETCH_OBJ);
 
-if($saida->primeiro_acesso == 0) {
+if($saida->apelido == null || $saida->apelido = "") {
 	header('location:../primeiro_acesso.html');
 } 
 else
 {
-	$comandoII = $con->prepare("select perfil.cod_perfil, perfil.cod_escola from perfil inner join login on perfil.cod_login = login.cod_login where login.cod_login = ?");
-	$comandoII->bindParam(1, $cod_login);
-	$comandoII->execute();
-	$saidaII = $comandoII->fetch(PDO::FETCH_OBJ);
-	$_SESSION['cod_perfil'] = $saidaII->cod_perfil;
-	$_SESSION['cod_escola'] = $saidaII->cod_escola;
 	switch($acesso)
        	{
 	        case 1:

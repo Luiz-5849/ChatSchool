@@ -15,8 +15,7 @@
 <body>
     <div class="center">
         <h1>Cadastrar Coordenador(a)</h1>
-        <form action="../cruds/novo_perfil.php" method="post"></form>
-        <form method="get" action="" id="dados_login">
+        <form method="post" action="../cruds/novo_perfil.php" id="dados_login">
             <div class="txt_field">
                 <input type="email" name="email" required id="email">
                 <span></span>
