@@ -86,14 +86,6 @@
         <br><br>
         create database bancotcc;<br>
         <br>
-        create table login(<br>
-        cod_login int primary key auto_increment,<br>
-        login varchar(40) not null,<br>
-        senha varchar(15) not null,<br>
-        acesso int not null,<br>
-        primeiro_acesso int not null<br>
-        );<br>
-        <br>
         create table perfil(<br>
         cod_perfil int primary key auto_increment,<br>
         nome varchar(50) null,<br>
@@ -104,8 +96,11 @@
         data_criacao date null,<br>
         cod_turma int null,<br>
         foreign key(cod_turma) references turma(cod_turma),<br>
-        cod_login int not null,<br>
-        foreign key(cod_login) references login(cod_login)<br>
+        cod_escola int null,<br>
+        foreign key(cod_escola) references escolas(cod_escola),<br>
+        login varchar(40) not null,<br>
+        senha varchar(15) not null,<br>
+        acesso int not null<br>
         );<br>
         <br>
         create table seguidores(<br>
@@ -148,7 +143,8 @@
         <br>
         create table turma(<br>
         cod_turma int primary key auto_increment,<br>
-        curso varchar(15) not null,<br>
+        cod_curso int,<br>
+        foreign key(cod_curso) references cursos(cod_curso),<br>
         periodo varchar(5) not null,<br>
         cod_escola int not null,<br>
         foreign key (cod_escola) references escolas(cod_escola)<br>
@@ -172,7 +168,7 @@
         <br>
         create table imagens(<br>
         cod_imagem int primary key auto_increment,<br>
-        imagem blob not null,<br>
+        imagem blob null,<br>
         nome_imagem varchar(50) not null,<br>
         cod_post int,<br>
         foreign key (cod_post) references postagens (cod_post)<br>
@@ -197,6 +193,10 @@
         foreign key (cod_perfil) references perfil(cod_perfil)<br>
         );<br>
         <br>
+        create table cursos(<br>
+        cod_curso int not null primary key auto_increment,<br>
+        nome_curso varchar(50)<br>
+        );<br>
     </div>
 
     <div id="descricao">
@@ -286,12 +286,16 @@
             - Campo imagem da tabela imagens alterado para tipo <i>blob not null</i><br>
             - Inserção do campo nome_imagem na tabela imagens<br>
             - Inserção do campo cod_escola na tabela turmas<br>
+            - Inserção do campo cod_escola na tabela perfil<br>
+            - Campos da tabela login inseridos na tabela perfil<br>
+            - Exclusão da tabela login<br>
             <br>
             <b>Front-end</b><br>
             - Criação de interface para os administradores poderem criar novos perfis<br>
             - Criação de interface para quando a conexão expirar e o usuário ser direcionado para a tela de login novamente<br>
             - Criação de interface de administrador para coordenadores<br>
             - Criação de interface de criação de novos perfis para coordenadores<br>
+            - Criação de interface para programadores para o cadastramento de novas escolas<br>
             <br>
             <b>Back-end</b><br>
             - Criação do 'option_escola.php', código responsável por listar as escolas cadastradas na rede social<br>
@@ -299,7 +303,8 @@
             - Criação do 'novo_perfil.php', código responsável por inserir novos usuários no banco de dados<br>
             - Criação do 'toPost.php', código responsável por fazer novas postagens na rede social (QUASE FINALIZADO)<br>
             - Criação do 'con_expirou.php', código responsável por assegurar que as interfaces não sejam executadas se os sessions estiverem vazios<br>
-            - Criação do 'dados_user_feed.php' código respondável por puxar do BD a foto e o apelido do usuário e exibí-los no feed<br> 
+            - Criação do 'dados_user_feed.php' código responsável por puxar do BD a foto e o apelido do usuário e exibí-los no feed<br>
+            - Criação do 'nova_escola.php' código responsável por cadastrar uma nova escola no BD<br>
             <br>
             <b>Correção</b><br>
             - O nome da tela de documentação foi alterado de 'designtcc.html' para 'documentacao.html'<br>
