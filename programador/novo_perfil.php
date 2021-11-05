@@ -17,7 +17,7 @@
         <h1>Cadastrar Coordenador(a)</h1>
         <form method="post" action="../cruds/novo_perfil.php" id="dados_login">
             <div class="txt_field">
-                <input type="email" name="email" required id="email">
+                <input type="text" name="email" required id="email">
                 <span></span>
                 <label>Email</label>
             </div>
@@ -28,10 +28,9 @@
             </div>
             <div>
                 <select class="form-select" aria-label="Default select example" name="acesso">
-                <option selected>Selecione</option>
                 <option value="1">Aluno(a)</option>
                 <option value="2">Professor(a)</option>
-                <option value="3">Cordenador(a)</option>
+                <option selected value="3">Cordenador(a)</option>
                 <option value="4">Programadores</option>
                 </select>
             </div>
