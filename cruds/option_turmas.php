@@ -9,5 +9,5 @@ $comando = $con->prepare("select turma.cod_turma, turma.modulo_ano, turma.nome_t
 $comando->bindParam(1, $cod_escola);
 $comando->execute();
 while ($linha = $comando->fetch(PDO::FETCH_OBJ)){
-    echo '<option value="'. $linha->cod_turma .'">'. $linha->modulo_ano .'º'. $linha->nome_turma .' - '. $linha->nome_curso .' - '. $linha->periodo .'</option>'
+    echo '<option value="'. $linha->cod_turma .'">'. $linha->modulo_ano .'º'. $linha->nome_turma .' - '. $linha->nome_curso .' - '. $linha->periodo .'</option>';
 }
