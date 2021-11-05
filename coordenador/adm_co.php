@@ -63,7 +63,7 @@
       </div>
       
       <div class="imgHome">
-        <img src="/assets/undraw_connecting_teams_re_hno7.svg" alt="">
+        <img src="../assets/undraw_connecting_teams_re_hno7.svg" alt="">
     </div>
 
 </body>

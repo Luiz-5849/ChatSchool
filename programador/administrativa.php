@@ -54,15 +54,11 @@
             </ul>
           </div>
         </div>
-      </nav>
+</nav>
 
-      <div class="get">
+    <div class="get">
         <svg class="waves"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2691d9" fill-opacity="1" d="M0,64L48,69.3C96,75,192,85,288,101.3C384,117,480,139,576,128C672,117,768,75,864,53.3C960,32,1056,32,1152,64C1248,96,1344,160,1392,192L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
       </div>
-      
-      <div class="imgHome">
-        <img src="../assets/undraw_bug_fixing_oc-7-a.svg" alt="">
-    </div>
 
-</body>S
+</body>
 </html>
