@@ -23,7 +23,7 @@
     <nav class="navbar navbar-light bg-light nav-top">
         <div class="container nav-container">
             <nav class="nav col-4">
-                <a href="feed.html"><img src="../assets/logo.png" alt=""></a>
+                <a href="feed.php"><img src="../assets/logo.png" alt=""></a>
             </nav>
                 <ul class="nav justify-content-center nav-fixed col-4">
                     <li class="nav-item">
@@ -32,7 +32,7 @@
                 </ul>
                     <ul class="nav justify-content-end col-4">
                         <li class="nav-item">
-                            <a href="feed.html" class="one"><img src="../icons/house.svg" alt=""></a>
+                            <a href="feed.php" class="one"><img src="../icons/house.svg" alt=""></a>
                             <div class="dropdown">
                               <button onclick="myFunction()" class="dropbtn"><img src="../icons/gear-wide.svg" alt=""></button>
                               <div id="myDropdown" class="dropdown-content">
@@ -101,7 +101,7 @@
                 <textarea name="textarea" placeholder="Faça uma publicação:" id="textarea"></textarea>
                 <div class="navegacao">
                     <div class="icons">
-                      <input type="file" name="arquivo" id="">
+                      <input type="file" name="arquivo" id="btn-post">
                     </div>
                     <button type="submit" class="btn">Postar</button>
                 </div>
