@@ -21,32 +21,32 @@
 
 <body>
 
-  <!--barra de navegação!-->
-  <nav class="navbar navbar-light bg-light nav-top">
-    <div class="container nav-container">
-      <nav class="nav col-4">
-        <a href="feed.html"><img src="../assets/logo.png" alt=""></a>
-      </nav>
-      <ul class="nav justify-content-center nav-fixed col-4">
-        <li class="nav-item">
-          <input class="form-nav" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1">
-        </li>
-      </ul>
-      <ul class="nav justify-content-end col-4">
-        <li class="nav-item">
-          <a href="feed.html" class="one"><img src="../icons/house.svg" alt=""></a>
-          <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn"><img src="../icons/gear-wide.svg" alt=""></button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
-              <a href="../cruds/deslogar.php">Sair</a>
-            </div>
-          </div>
-          <a href="../aluno_professor/perfil.php" class="four"><img src="../imagens/<?php echo $nome_img_user; ?>" alt=""></a>
-    </div>
-  </nav>
-  <!--fim da barra de navegação!-->
+<!--barra de navegação!-->
+    <nav class="navbar navbar-light bg-light nav-top">
+        <div class="container nav-container">
+            <nav class="nav col-4">
+                <a href="feed.php"><img src="../assets/logo.png" alt=""></a>
+            </nav>
+                <ul class="nav justify-content-center nav-fixed col-4">
+                    <li class="nav-item">
+                        <input class="form-nav" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1">
+                    </li>
+                </ul>
+                    <ul class="nav justify-content-end col-4">
+                        <li class="nav-item">
+                            <a href="feed.php" class="one"><img src="../icons/house.svg" alt=""></a>
+                            <div class="dropdown">
+                              <button onclick="myFunction()" class="dropbtn"><img src="../icons/gear-wide.svg" alt=""></button>
+                              <div id="myDropdown" class="dropdown-content">
+                                <a href="#home">Home</a>
+                                <a href="#about">About</a>
+                                <a href="../cruds/deslogar.php">Sair</a>
+                              </div>
+                            </div>
+                            <a href="../aluno_professor/perfil.php" class="four"><img src="../imagens/<?php echo $nome_img_user; ?>" alt=""></a>
+        </div>
+    </nav>
+<!--fim da barra de navegação!-->
 
 
   <main class="main">
@@ -88,23 +88,23 @@
             </div> -->
     </div>
 
-    <!--Fim dos comunicados-->
-
-    <!--Postagem do feed-->
-    <div class="post">
-      <div class="infousuario">
-        <div class="imagem">
-          <img src="../imagens/<?php echo $nome_img_user; ?>" alt="">
-        </div>
-        <h1><?php echo $apelido_user; ?></h1>
-      </div>
-      <form action="../cruds/toPost.php" enctype="multipart/form-data" class="textPost" id="publiPost" method="post">
-        <textarea name="textarea" placeholder="Faça uma publicação:" id="textarea"></textarea>
-        <div class="navegacao">
-          <div class="icons">
-            <input type="file" name="arquivo" id="">
-          </div>
-          <button type="submit" class="btn">Postar</button>
+<!--Postagem do feed-->
+        <div class="post">
+            <div class="infousuario">
+                <div class="imagem">
+                    <img src="../imagens/<?php echo $nome_img_user; ?>" alt="">
+                </div>
+                   <h1><?php echo $apelido_user; ?></h1>
+            </div>
+            <form action="../cruds/toPost.php" enctype="multipart/form-data" class="textPost" id="publiPost" method="post">
+                <textarea name="textarea" placeholder="Faça uma publicação:" id="textarea"></textarea>
+                <div class="navegacao">
+                    <div class="icons">
+                      <input type="file" name="arquivo" id="btn-post">
+                    </div>
+                    <button type="submit" class="btn">Postar</button>
+                </div>
+            </form>
         </div>
       </form>
     </div>
