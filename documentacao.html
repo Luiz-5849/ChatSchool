@@ -94,8 +94,6 @@
         cod_imagem int null,<br>
         foreign key(cod_imagem) references imagens(cod_imagem),<br>
         data_criacao date null,<br>
-        cod_turma int null,<br>
-        foreign key(cod_turma) references turma(cod_turma),<br>
         cod_escola int null,<br>
         foreign key(cod_escola) references escolas(cod_escola),<br>
         login varchar(40) not null,<br>
@@ -143,11 +141,13 @@
         <br>
         create table turma(<br>
         cod_turma int primary key auto_increment,<br>
+        nome_turma varchar(3) null,<br>
         cod_curso int,<br>
         foreign key(cod_curso) references cursos(cod_curso),<br>
         periodo varchar(5) not null,<br>
         cod_escola int not null,<br>
-        foreign key (cod_escola) references escolas(cod_escola)<br>
+        foreign key (cod_escola) references escolas(cod_escola),<br>
+        modulo_ano int null<br>
         );<br>
         <br>
         create table escolas(<br>
@@ -275,7 +275,7 @@
             - Foi criado o 'login.js' para adicionar javascript no 'login.html'<br> 
         </div>
 
-        <h1 class="semana">Semana 25/09 -> XX/XX -- V.5</h1>
+        <h1 class="semana">Semana 25/09 -> 04/11 -- V.5</h1>
         <div class="bd">
             <br><br>
             <b>Banco de Dados</b><br>
@@ -318,6 +318,25 @@
             - O nome da tela de documentação foi alterado de 'designtcc.html' para 'documentacao.html'<br>
             - O nome do código 'cad.php' foi alterado para 'primeiro_acesso.php'<br>
             - Algumas correções foram feitas nos códigos 'valida_login.php', 'verifica.php', 'primeiro_acesso.php' devido a algumas alterações do BD<br>
+        </div>
+
+        <h1 class="semana">Semana 05/11 -> XX/XX -- V.6</h1>
+        <div class="bd">
+            <br><br>
+            <b>Banco de Dados</b><br>
+            - Inclusão do campo modulo_ano na tabela turma<br>
+            - Inclusão do campo nome_turma na tabela turma<br>
+            - Exclusão do campo cod_turma da tabela perfil<br>
+            <br>
+            <b>Front-end</b><br>
+            
+            <br>
+            <b>Back-end</b><br>
+            - Criação do 'nova_turma.php' código responsável por permitir que o coordenador crie novas turmas<br>
+            - Criação do 'option_turmas.php' código responsável por listar as turmas cadastradas no BD<br>
+            <br>
+            <b>Correção</b><br>
+
         </div>
 
     </div>
