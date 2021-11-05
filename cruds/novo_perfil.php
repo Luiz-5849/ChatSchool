@@ -7,7 +7,11 @@ session_start();
     $senha=$_POST['senha'];
     $acesso=$_POST['acesso'];
     $acesso_user = $_SESSION['acesso'];
-    $escola = $_SESSION['cod_escola'];
+    if ($acesso_user == 4){
+        $escola = $_POST['escola'];
+    }else{
+        $escola = $_SESSION['cod_escola'];
+    }
     
     $comando=$con->prepare("insert into perfil (login, senha, acesso, cod_escola) values (?, ?, ?, ?)");
     $comando->bindParam(1,$email);

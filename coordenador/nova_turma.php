@@ -13,12 +13,12 @@
         <div>
             <select class="form-select" aria-label="Default select example" name="curso">
                 <option selected>Curso</option>
-                <?php include '../cruds/option_cursos.php' ?>
+                <?php include '../cruds/option_cursos.php'; ?>
             </select>
         </div>
         <div>
             <select name="modulo_ano">
-                <option selected value="">Selecione</option>
+                <option selected value="">Ano/Módulo</option>
                 <option value="1">1º ano/módulo</option>
                 <option value="2">2º ano/módulo</option>
                 <option value="3">3º ano/módulo</option>
@@ -27,7 +27,7 @@
         </div>
         <div>
             <select name="nome_turma">
-                <option selected value="">Selecione</option>
+                <option selected value="">Turma</option>
                 <option value="A">A</option>
                 <option value="B">B</option>
                 <option value="C">C</option>
@@ -36,7 +36,7 @@
         </div>
         <div>
             <select name="periodo">
-                <option selected value="0">Selecione</option>
+                <option selected value="0">Período</option>
                 <option value="Manhã">Manhã</option>
                 <option value="Tarde">Tarde</option>
                 <option value="Noite">Noite</option>
