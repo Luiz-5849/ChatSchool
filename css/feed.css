@@ -283,3 +283,6 @@ div.icons{
 
   .show {display: block;}
 
+#btn-post{
+    display: none;
+}
