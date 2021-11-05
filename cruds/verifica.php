@@ -21,11 +21,11 @@ else
 	switch($acesso)
        	{
 	        case 1:
-	        header('location:../aluno_professor/perfil.php');
+	        header('location:../aluno_professor/feed.php');
 	            break;
 
 	        case 2:
-	        header('location:../aluno_professor/perfil.php');
+	        header('location:../aluno_professor/feed.php');
 	            break;
 
 	        case 3:
