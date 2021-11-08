@@ -126,13 +126,11 @@
         foreign key(cod_post) references postagens(cod_post)<br>
         );<br>
         <br>
-        create table comentario(<br>
+        create table comentarios(<br>
         cod_comentario int primary key auto_increment,<br>
         comentario varchar(280) null,<br>
         cod_perfil int not null,<br>
         foreign key(cod_perfil) references perfil(cod_perfil),<br>
-        cod_seguidor int not null,<br>
-        foreign key(cod_seguidor) references seguidores(cod_seguidor),<br>
         cod_post int not null,<br>
         foreign key(cod_post) references postagens(cod_post)<br>
         );<br>
@@ -329,6 +327,8 @@
             - Exclusão do campo cod_turma da tabela perfil<br>
             - Inclusão do campo cod_escola na tabela comunicado<br>
             - Exclusão do campo cod_seguidor da tabela lieks<br>
+            - Nome da tabela comentario alterado para comentarios<br>
+            - Exclusão do campo cod_seguidor da tabela comentarios<br>
             <br>
             <b>Front-end</b><br>
             - Criação de interface para coordenador escrever um comunicado para a escola inteira<br>
