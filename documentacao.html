@@ -122,8 +122,6 @@
         cod_like int primary key auto_increment,<br>
         cod_perfil int not null,<br>
         foreign key(cod_post) references perfil(cod_perfil),<br>
-        cod_seguidor int not null,<br>
-        foreign key(cod_seguidor) references seguidores(cod_seguidor),<br>
         cod_post int not null,<br>
         foreign key(cod_post) references postagens(cod_post)<br>
         );<br>
@@ -330,6 +328,7 @@
             - Inclusão do campo nome_turma na tabela turma<br>
             - Exclusão do campo cod_turma da tabela perfil<br>
             - Inclusão do campo cod_escola na tabela comunicado<br>
+            - Exclusão do campo cod_seguidor da tabela lieks<br>
             <br>
             <b>Front-end</b><br>
             - Criação de interface para coordenador escrever um comunicado para a escola inteira<br>
