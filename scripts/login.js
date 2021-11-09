@@ -4,7 +4,7 @@ $(document).ready(function(){
         var dados = $('#dados_login').serialize();
 
         $.ajax ({
-            method: 'GET',
+            method: 'POST',
             url: 'cruds/valida_login.php',
             data: dados,
         })

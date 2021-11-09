@@ -4,7 +4,7 @@ include 'conexao.php';
 session_start();
 
 $escola = $_SESSION['cod_escola'];
-$comunicado = $_GET['comunicado'];
+$comunicado = $_POST['comunicado'];
 
 $comando = $con->prepare("INSERT into comunicados (comunicado, cod_escola, data_comunicado) values (?, ?, curdate())");
 $comando->bindParam(1, $comunicado);

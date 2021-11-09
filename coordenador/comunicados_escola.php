@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>COMUNICAR ESCOLA</h1>
-    <form name="" id="" action="../cruds/comunicar_escola.php" method="get">
+    <form name="" id="" action="../cruds/comunicar_escola.php" method="post">
         <div>
             <label>Comunicado</label>
             <input type="text" name="comunicado">

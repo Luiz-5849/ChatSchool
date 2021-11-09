@@ -2,7 +2,7 @@
 
 include 'conexao.php';
 
-$curso = $_GET['curso'];
+$curso = $_POST['curso'];
 
 $comando = $con->prepare("insert into cursos (nome_curso) value (?)");
 $comando->bindParam(1, $curso);

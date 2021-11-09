@@ -4,7 +4,7 @@ $(document).ready(function(){
         var dados = $('#form').serialize();
 
         $.ajax ({
-            method: 'GET',
+            method: 'POST',
             url: 'cruds/primeiro_acesso.php',
             data: dados,
         })

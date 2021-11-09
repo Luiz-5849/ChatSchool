@@ -9,7 +9,7 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <form name="" id="" method="get" action="../cruds/nova_turma.php">
+    <form name="" id="" method="post" action="../cruds/nova_turma.php">
         <div>
             <select class="form-select" aria-label="Default select example" name="curso">
                 <option selected>Curso</option>

@@ -4,7 +4,7 @@ include 'conexao.php';
 session_start();
 $cod = $_SESSION['cod_perfil'];
 
-$bio = $_GET['bio'];
+$bio = $_POST['bio'];
 
 $comando = $con->prepare("update perfil set bio = ? where cod_perfil = ?");
 $comando->bindParam(1, $bio);

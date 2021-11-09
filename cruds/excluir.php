@@ -2,8 +2,8 @@
 
 include "conexao.php"
 
-if(isset($_GET["Email"])){$Email=$_GET["Email"];}
-if(isset($_GET["Senha"])){$Senha=$_GET["Senha"];}
+if(isset($_POST["Email"])){$Email=$_POST["Email"];}
+if(isset($_POST["Senha"])){$Senha=$_POST["Senha"];}
 
 
 try{

@@ -4,10 +4,10 @@ include 'conexao.php';
 session_start();
 
 $cod_perfil = $_SESSION['cod_perfil'];
-$email = $_GET['email'];
-$senha = $_GET['senha'];
-$nome = $_GET['nome'];
-$apelido = $_GET['apelido'];
+$email = $_POST['email'];
+$senha = $_POST['senha'];
+$nome = $_POST['nome'];
+$apelido = $_POST['apelido'];
 
 $comando = $con->prepare("select * from perfil where apelido = ?");
 $comando->bindParam(1, $apelido);

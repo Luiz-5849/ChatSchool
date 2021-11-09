@@ -3,16 +3,16 @@
 include 'conexao.php';
 session_start();
 
-if (isset($_GET['acesso'])) {
-	$acesso = addslashes($_GET['acesso']);
+if (isset($_POST['acesso'])) {
+	$acesso = addslashes($_POST['acesso']);
 }
 
-if (isset($_GET['email'])) {
-	$login = addslashes($_GET['email']);
+if (isset($_POST['email'])) {
+	$login = addslashes($_POST['email']);
 }
 
-if (isset($_GET['senha'])) {
-	$senha = addslashes($_GET['senha']);
+if (isset($_POST['senha'])) {
+	$senha = addslashes($_POST['senha']);
 }
 
 

@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Consulta</h1>
-    <form>
+    <form method="post">
         <select name="acesso">
             <option selected value="0">Tipo do perfil</option>
             <option value="0">- -</option>
