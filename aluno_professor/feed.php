@@ -104,7 +104,6 @@
                 </div>
             </form>
         </div>
-      </form>
     </div>
     <!--Fim da Postagem do Feed-->
 
