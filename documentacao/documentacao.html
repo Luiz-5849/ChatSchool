@@ -151,14 +151,14 @@
         nome_escola varchar(35) not null<br>
         );<br>
         <br>
-        create table comunicado(<br>
+        create table comunicados(<br>
         cod_comunicado int primary key auto_increment,<br>
         cod_turma int null,<br>
         foreign key(cod_turma) references turma(cod_turma),<br>
         comunicado varchar(350) null,<br>
         cod_imagem int(4) not null,<br>
         foreign key(cod_imagem) references imagens(cod_imagem),<br>
-        cod_perfil int not null,<br>
+        cod_perfil int null,<br>
         foreign key(cod_perfil) references perfil(cod_perfil),<br>
         cod_escola int null,<br>
         foreign key(cod_escola) references escolas(cod_escola)<br>
@@ -195,6 +195,20 @@
         cod_curso int not null primary key auto_increment,<br>
         nome_curso varchar(50)<br>
         );<br>
+        <br><br>
+        -- SELECTS<br>
+        select * from perfil;<br>
+        select * from seguidores;<br>
+        select * from postagens;<br>
+        select * from likes;<br>
+        select * from comentarios;<br>
+        select * from turma;<br>
+        select * from escolas;<br>
+        select * from comunicado;<br>
+        select * from imagens;<br>
+        select * from mensagens;<br>
+        select * from enturmando;<br>
+        select * from cursos;<br>
     </div>
 
     <div id="descricao">
@@ -329,6 +343,7 @@
             - Exclusão do campo cod_seguidor da tabela lieks<br>
             - Nome da tabela comentario alterado para comentarios<br>
             - Exclusão do campo cod_seguidor da tabela comentarios<br>
+            - Nome da tabela comunicado alterado para comunicados<br>
             <br>
             <b>Front-end</b><br>
             - Criação de interface para coordenador escrever um comunicado para a escola inteira<br>
