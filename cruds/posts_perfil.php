@@ -3,7 +3,7 @@
 include 'conexao.php';
 $cod = $_SESSION['cod_perfil'];
 
-$comando = $con->prepare("select cod_post, descricao_post from postagens where cod_perfil = ? order by data_post desc");
+$comando = $con->prepare("select descricao_post, cod_imagem from postagens where cod_perfil = ? order by data_post desc");
 $comando->bindParam(1, $cod);
 if ($comando->execute())
 {
@@ -12,27 +12,15 @@ if ($comando->execute())
 		while($linha = $comando->fetch(PDO::FETCH_OBJ))
 		{   
 			$descricao = $linha->descricao_post;
-			$cod_post = $linha->cod_post;
+			$cod_imagem = $linha->cod_imagem;
 
-			$comandoII = $con->prepare("select imagem, nome_imagem from imagens where cod_post = ?");
-			$comandoII->bindParam(1,$cod_post);
+			$comandoII = $con->prepare("select nome_imagem from imagens where cod_imagem = ?");
+			$comandoII->bindParam(1,$cod_imagem);
 			$comandoII->execute();
 
-			if ($comandoII->rowCount() > 1) 
-			{	//Comando para fazer carrossel de imagens
-				
-				while($linhaII = $comandoII->fetch(PDO::FETCH_OBJ))
-				{
-					echo '<div class="col-3">
-							<img class="card-img-top" src="data:image/jpg;base64,' . base64_encode($linhaII->imagem) . '">
-						</div>';
-				}
-			} 
-			else
-			{   //Comando para inserir a imagem se houver apenas uma no post
-				$img = $comandoII->fetch(PDO::FETCH_OBJ);
-				echo '<div class="col-3"><img src="../imagens/' . $img->nome_imagem . '"></div>';
-			}
+			$img = $comandoII->fetch(PDO::FETCH_OBJ);
+			
+			echo '<div class="col-3"><img src="../imagens/' . $img->nome_imagem . '"></div>';
 		}
 	}
 }
