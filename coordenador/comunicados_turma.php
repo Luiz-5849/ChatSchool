@@ -8,9 +8,9 @@
     
 </head>
 <body>
-    <label>Período</label>
-    <form name="" id="" action="" method="get">
-        <select name="período">
+    <h1>COMUNICAR TURMA</h1>
+    <form name="" id="" action="../cruds/comunicar_turma.php" method="post">
+        <select name="turma">
             <option selected value="0">Turma</option>
             <?php include '../cruds/option_turmas.php'; ?>
         </select>
