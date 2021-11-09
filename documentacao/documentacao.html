@@ -115,7 +115,9 @@
         foreign key(cod_perfil) references perfil(cod_perfil),<br>
         descricao_post varchar(70) null,<br>
         data_post date not null,<br>
-        hora_post time not null<br>
+        hora_post time not null,<br>
+        cod_imagem int null,<br>
+        foreign key(cod_imagem) references imagens(cod_imagem)<br>
         );<br>
         <br>
         create table likes(<br>
@@ -167,17 +169,15 @@
         create table imagens(<br>
         cod_imagem int primary key auto_increment,<br>
         imagem blob null,<br>
-        nome_imagem varchar(50) not null,<br>
-        cod_post int,<br>
-        foreign key (cod_post) references postagens (cod_post)<br>
+        nome_imagem varchar(50) not null<br>
         );<br>
         <br>
         create table mensagens(<br>
         cod_mensagem int primary key auto_increment,<br>
         mensagem varchar(1000) null,<br>
-        remetente char(4) not null,<br>
+        remetente int not null,<br>
         foreign key (remetente) references perfil(cod_perfil),<br>
-        destinatario char(4) not null,<br>
+        destinatario int not null,<br>
         foreign key(destinatario) references perfil(cod_perfil),<br>
         data_mensagem date not null,<br>
         hora_mensagem time not null<br>
@@ -185,7 +185,7 @@
         <br>
         create table enturmando(<br>
         cod_enturmando int not null primary key auto_increment,<br>
-        cod_turma int(3) not null,<br>
+        cod_turma int not null,<br>
         foreign key (cod_turma) references turma(cod_turma),<br>
         cod_perfil int not null,<br>
         foreign key (cod_perfil) references perfil(cod_perfil)<br>
@@ -344,6 +344,8 @@
             - Nome da tabela comentario alterado para comentarios<br>
             - Exclusão do campo cod_seguidor da tabela comentarios<br>
             - Nome da tabela comunicado alterado para comunicados<br>
+            - Exclusão do campo cod_post da tabela imagens<br>
+            - Inclusão do campo cod_imagem na tabela postagens<br>
             <br>
             <b>Front-end</b><br>
             - Criação de interface para coordenador escrever um comunicado para a escola inteira<br>
