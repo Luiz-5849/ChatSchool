@@ -8,7 +8,6 @@
     
 </head>
 <body>
-    <label>Período</label>
     <h1>COMUNICAR ESCOLA</h1>
     <form name="" id="" action="../cruds/comunicar_escola.php" method="get">
         <div>
