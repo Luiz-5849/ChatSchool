@@ -7,6 +7,7 @@ session_start();
     $senha=$_POST['senha'];
     $acesso=$_POST['acesso'];
     $acesso_user = $_SESSION['acesso'];
+    
     if ($acesso_user == 4){
         $escola = $_POST['escola'];
     }else{
