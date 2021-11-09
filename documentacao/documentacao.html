@@ -156,7 +156,7 @@
         cod_turma int null,<br>
         foreign key(cod_turma) references turma(cod_turma),<br>
         comunicado varchar(350) null,<br>
-        cod_imagem int(4) not null,<br>
+        cod_imagem int null,<br>
         foreign key(cod_imagem) references imagens(cod_imagem),<br>
         cod_perfil int null,<br>
         foreign key(cod_perfil) references perfil(cod_perfil),<br>
