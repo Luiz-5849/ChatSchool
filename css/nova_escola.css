@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+.centroul{  
+    text-align: center;
+    position: absolute;
+    left: 25%;
+    top: 30%;
+    transform: translate(-50%, -45%);
+    width: 500px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 1px 8px 1px rgba(127, 158, 189, 0.418);
+}
+
+.centroul h1{
+    font-weight: 700;
+    color: rgb(9, 29, 49);
+    margin-top: 8px;
+    text-align: center;
+    text-decoration: underline dodgerblue 4px;
+}
+
+.info label{
+    margin-top: 2rem;
+    margin-left: 10px;
+    font-weight: 700;
+    text-decoration: underline rgba(175, 175, 179, 0.445) 2px;
+}
+
+.info input{
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin-left: 8px;
+    outline: none;
+    padding: 3px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.info input:focus{
+    border-color: dodgerblue;
+    box-shadow: 0px 0px 8px 0px dodgerblue;
+}
+
+.btn-form input{
+    margin-top: 1.8rem;
+    width: 100%;
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+}
+
+.btn-form input:hover{
+    background-color: rgb(240, 236, 236);
+    color: dodgerblue;
+    transition: 0.8s;
+    text-decoration: underline rgb(255, 255, 255);
+}
+
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(24, 119, 207, 0.911);
+    clip-path: circle(600px at right 800px);
+}
+
+.imgSchool{
+    width: 600;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 4rem;
+    margin-top: 12rem;
+}
+
+.imgSchool img{
+    max-width: 580px;
+    z-index: 1;
+}
