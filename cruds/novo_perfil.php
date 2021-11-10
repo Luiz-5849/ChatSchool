@@ -18,10 +18,11 @@ session_start();
     $comando->bindParam(1,$email);
     $comando->bindParam(2,$senha);
     $comando->bindParam(3,$acesso);
-    $comando->bindParam(4, $escola);
+    $comando->bindParam(4,$escola);
     $comando->execute();
 
-    if ($acesso_user == 3) {
+    if ($acesso_user == 3 && !isset($_POST['turma'])) {
+
         $cod_turma = $_POST['turma'];
 
         $comandoII = $con->prepare("select cod_perfil from perfil where login = ? and senha = ?");

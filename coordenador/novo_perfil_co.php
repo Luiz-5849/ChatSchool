@@ -22,7 +22,7 @@
             </div>
             <div>
                 <select name="turma">
-                    <option selected>Selecione</option>
+                    <option value="null" selected>Selecione</option>
                     <option value="null">--</option>
                     <?php include '../cruds/option_turmas.php'; ?>
                 </select>
