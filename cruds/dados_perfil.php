@@ -7,6 +7,8 @@ include '../cruds/con_expirou.php';
 
 $cod = $_SESSION['cod_perfil'];
 
+$id = $cod * 11 + 13;
+
 //Comando para puxar o nome e a bio
 $comandoI = $con->prepare("select apelido, bio from perfil where cod_perfil = ?");
 $comandoI->bindParam(1, $cod);
