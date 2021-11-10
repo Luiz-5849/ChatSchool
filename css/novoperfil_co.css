@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+.single{
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    width: 400px;
+    height: 408px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 8px 0px rgba(117, 113, 113, 0.425);
+}
+
+.single h1{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 700;
+    text-decoration: underline dodgerblue 4px;
+    color: rgb(10, 10, 48);
+}
+
+.oneform{
+    margin-top: 1rem;
+    text-align: center;
+} 
+
+.oneform input{
+    padding: 8px;
+    border: 2px solid rgb(221, 214, 214);
+    border-radius: 4px;
+    margin-left: 8px;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.3s;
+    box-shadow: 0px 1px 8px 0px rgb(230, 227, 227);
+}
+
+.oneform input:focus{
+    text-decoration: underline #aaa;
+    border-color: dodgerblue;
+    box-shadow: 0px 0px 8px 0px dodgerblue;
+}
+
+.Drop{
+    text-align: center;
+    margin-top: 1.8rem;
+}
+
+.Drop select{
+    padding: 6px 20px;
+    outline: none;
+    border: 2px solid dodgerblue; 
+    border-radius: 4px;
+    font-weight: 600;
+    color: rgb(10, 10, 48);
+    transition: 0.3s;
+    box-shadow: 0px 1px 8px 0px rgb(230, 227, 227);
+}
+
+.Drop select:focus{
+    border-color: gray;
+    box-shadow: 0px 0px 8px 0px #aaa;
+}
+
+.button{
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+.button input{
+    outline: none;
+    background-color: dodgerblue;
+    padding: 8px 28px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0px 1px 8px 0px rgb(134, 133, 133);
+}
+
+.button input:hover{
+    background-color: rgb(10, 10, 48);
+}
+
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2691d9, rgb(10, 10, 48));
+    clip-path: circle(600px at center 900px);
+    z-index: -1;
+}
