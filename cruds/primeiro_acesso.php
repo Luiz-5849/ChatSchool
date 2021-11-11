@@ -9,23 +9,30 @@ $senha = $_POST['senha'];
 $nome = $_POST['nome'];
 $apelido = $_POST['apelido'];
 
-$comando = $con->prepare("select * from perfil where apelido = ?");
-$comando->bindParam(1, $apelido);
-$comando->execute();
+$comandoI = $con->prepare("select * from perfil where apelido = ?");
+$comandoI->bindParam(1, $apelido);
+$comandoI->execute();
 
-if ($comando->rowCount() > 0) {
+$comandoII = $con->prepare("select * from perfil where login = ?");
+$comandoII->bindParam(1, $email);
+$comandoII->execute();
+
+if ($comandoI->rowCount() > 0) {
     $result = "n";
     echo $result;
 }
-else
-{
-    $comandoI = $con->prepare("update perfil set login = ?, senha = ?, nome = ?, apelido = ? where cod_perfil = ?");
-    $comandoI->bindParam(1, $email);
-    $comandoI->bindParam(2, $senha);
-    $comandoI->bindParam(3, $nome);
-    $comandoI->bindParam(4, $apelido);
-    $comandoI->bindParam(5, $cod_perfil);
-    $comandoI->execute();
+elseif($comandoII->rowCount() > 0){
+    $result = "e";
+    echo $result;
+} 
+else{
+    $comandoIII = $con->prepare("update perfil set login = ?, senha = ?, nome = ?, apelido = ? where cod_perfil = ?");
+    $comandoIII->bindParam(1, $email);
+    $comandoIII->bindParam(2, $senha);
+    $comandoIII->bindParam(3, $nome);
+    $comandoIII->bindParam(4, $apelido);
+    $comandoIII->bindParam(5, $cod_perfil);
+    $comandoIII->execute();
 
     $result = "y";
     echo $result;

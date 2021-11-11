@@ -15,7 +15,15 @@ $(document).ready(function(){
                 location.href = 'cruds/verifica.php';
             }
             else{
-                $('#result').html("Esse apelido já existe, por favor insira outro");
+                if(msg == "n"){
+                    $('#resultII').html("Esse apelido já existe, por favor insira outro");
+                    $('#resultI').html("");
+                }else{
+                    if(msg == "e"){
+                        $('#resultI').html("Esse email já existe, por favor insira outro");
+                        $('#resultII').html("");
+                    }
+                }
             }
         })
         return false;
