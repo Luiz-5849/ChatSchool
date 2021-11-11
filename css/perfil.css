@@ -35,8 +35,9 @@
 .form-control{
     border: none;
     background-color: rgb(235, 233, 233);
-    padding: 10px 70px;
+    padding: 10px 50px;
     border-radius: 25px;
+    width: 34.3rem;
 }
 
 .icons img:hover{
