@@ -29,7 +29,7 @@
             </nav>
                 <ul class="nav justify-content-center nav-fixed col-4">
                     <li class="nav-item">
-                        <input class="form-nav" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1">
+                        <input class="form-nav" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1" name="pesquisar">
                     </li>
                 </ul>
                     <ul class="nav justify-content-end col-4">
