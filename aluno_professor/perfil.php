@@ -54,7 +54,7 @@
                             </div>!-->
 
                               <div class="ImageContainer">
-                                <img onclick="myFunction()" src="../imagens/blank-profile-picture-973460__480.png" alt="Selecione uma Imagem" id="image">
+                                <img onclick="myFunction()" title="Editar" src="../imagens/blank-profile-picture-973460__480.png" alt="Selecione uma Imagem" id="image">
                                 <form action="">
                                   <input onclick="myFunction()" type="file" id="imgInput" name="flImage" accept="image/*">
                               </form>
