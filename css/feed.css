@@ -23,8 +23,9 @@
     border: none;
     background-color: rgb(235, 233, 233);
     outline: none;
-    padding: 10px 100px;
+    padding: 10px 50px;
     border-radius: 25px;
+    width: 550px;
 }
 
 .nav-item img{
