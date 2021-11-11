@@ -26,7 +26,7 @@
             <a href="feed.php"><img src="../assets/logo.png" alt=""></a>
           </a>
           <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1">
+            <input class="form-control" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1">
         </form>
         
             <div class="icons">
@@ -54,7 +54,10 @@
                             </div>!-->
 
                               <div class="ImageContainer">
-                                <img src="../imagens/blank-profile-picture-973460__480.png" alt="Selecione uma Imagem" id="imgPhoto">
+                                <img onclick="myFunction()" src="../imagens/blank-profile-picture-973460__480.png" alt="Selecione uma Imagem" id="image">
+                                <form action="">
+                                  <input onclick="myFunction()" type="file" id="imgInput" name="flImage" accept="image/*">
+                              </form>
                               </div>
                             </div>
                             <div class="col-7">
@@ -135,7 +138,5 @@
         </div>
     </section>
 
-    <input type="file" id="flImage" name="flImage" accept="image/*">
-    
 </body>
 </html>

@@ -1,10 +1,7 @@
-
-
-'use strict'
-
-let photo = document.getElementById('imgPhoto');
-let file = document.getElementById('flImage');
-
-photo.addEventListener('click', () => {
-    file.click();
-});
+function myFunction(){
+    let imagem = document.getElementById('image');
+    let pesquisa = document.getElementById('imgInput');
+    imagem.addEventListener('click', () => {
+        pesquisa.click();
+    });
+}
