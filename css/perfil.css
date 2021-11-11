@@ -162,4 +162,5 @@ input[type='file']{
     -moz-border-radius: 100%; 
     max-width:200px; 
     max-height:150px;
+    cursor: pointer;
 }
