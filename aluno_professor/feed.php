@@ -29,8 +29,10 @@
             </nav>
                 <ul class="nav justify-content-center nav-fixed col-4">
                     <li class="nav-item">
+                      <a href="resultados_pesquisa.php">
                         <input class="form-nav" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1" name="pesquisar">
-                      </li> 
+                      </a>
+                    </li> 
                 </ul>
                     <ul class="nav justify-content-end col-4">
                         <li class="nav-item">
