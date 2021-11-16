@@ -32,9 +32,9 @@ $(document).ready(function(){
             for(i=0; i < cont; i++){
                 tabela += '<a id="">';
                 tabela += '<form method="post" action="">';
-                tabela += '<div class="centroul">';
-                tabela += '<div class="containerChat">';
-                //tabela +=    '<img src="../assets/blank-profile-picture-973460__480.png" alt="">';
+                //tabela += '<div class="centroul">';
+                //tabela += '<div class="containerChat">';
+                tabela +=    '<img src="../assets/blank-profile-picture-973460__480.png" alt="">';
                 tabela +=    '<div class="container" id="barra">';
                 tabela +=        '<div class="row">';
                 tabela +=            '<p class="name_apelido">'
@@ -47,8 +47,8 @@ $(document).ready(function(){
                 tabela += '</p>';
                 tabela +=        '</div>';
                 tabela +=    '</div>';
-                tabela += '</div>';
-                tabela += '</div>';
+                //tabela += '</div>';
+                //tabela += '</div>';
                 tabela += '</form>';
                 tabela += '</a>';
             }
