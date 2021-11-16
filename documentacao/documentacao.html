@@ -114,8 +114,7 @@
         cod_perfil int not null,<br>
         foreign key(cod_perfil) references perfil(cod_perfil),<br>
         descricao_post varchar(70) null,<br>
-        data_post date not null,<br>
-        hora_post time not null,<br>
+        hora_post timestamp not null,<br>
         cod_imagem int null,<br>
         foreign key(cod_imagem) references imagens(cod_imagem)<br>
         );<br>
@@ -346,6 +345,7 @@
             - Nome da tabela comunicado alterado para comunicados<br>
             - Exclusão do campo cod_post da tabela imagens<br>
             - Inclusão do campo cod_imagem na tabela postagens<br>
+            - Exclusão do campo data_post da tabela postagens<br>
             <br>
             <b>Front-end</b><br>
             - Criação de interface para coordenador escrever um comunicado para a escola inteira<br>
@@ -359,6 +359,8 @@
             - Criação do 'comunicar_turma.php' código responsável por registrat no BD os comunicados enviados para determinada turma<br>
             - Criação do 'exibir_comunicados_turma.php' código responsável por selecionar os códigos enviados para uma turma e exibí-los<br>
             - Criação do 'pesquisar_perfil.php' código responsável por permitir que o usuário pesquise outras pessoas cadastradas na rede<br>
+            - Criação do código javascript 'photo.js'<br>
+            - Criação do código javascript 'seguidor.js'<br>
             <br>
             <b>Correção</b><br>
 
