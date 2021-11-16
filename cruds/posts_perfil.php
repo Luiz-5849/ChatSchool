@@ -3,7 +3,7 @@
 include 'conexao.php';
 $cod = $_SESSION['cod_perfil'];
 
-$comando = $con->prepare("select descricao_post, cod_imagem from postagens where cod_perfil = ? order by data_post desc");
+$comando = $con->prepare("select descricao_post, cod_imagem from postagens where cod_perfil = ? order by hora_post desc");
 $comando->bindParam(1, $cod);
 if ($comando->execute())
 {
