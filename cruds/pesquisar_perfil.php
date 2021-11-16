@@ -12,7 +12,7 @@ $comando->bindParam(2,$pesquisado);
 $comando->bindParam(3,$pesquisado);
 
 $comando->execute();
-$linha=$comando->fetch(PDO::FETCH_OBJ);
+$linha=$comando->fetchAll();
 //echo $linha->apelido;
 $saida = json_encode($linha);
 echo $saida;
