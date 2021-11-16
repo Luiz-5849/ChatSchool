@@ -17,6 +17,7 @@
         rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../scripts/dropdown.js"></script>
+    <script src="../scripts/seguidor.js"></script>
     <title>ChatSchool</title>
 
     <?php include '../cruds/dados_user_pesquisa.php'; ?>
@@ -31,14 +32,17 @@
                 <a href="feed.php"><img src="../assets/logo.png" alt=""></a>
             </nav>
             <ul class="nav justify-content-center nav-fixed col-4">
+                <form method="get" id="pesquisa">
                 <li class="nav-item">
                     <input class="form-nav" type="search" placeholder="@    Search" aria-label="Search"
                         aria-describedby="basic-addon1" name="pesquisar">
                 </li>
+                <input type="submit" value="enviar" id="enviar">
+                </form>
             </ul>
             <ul class="nav justify-content-end col-4">
                 <li class="nav-item">
-                    <a style="margin-right: 120px;" href="resultados_pesquisa.php"><img src="../icons/lupa.png"
+                    <a style="margin-right: 120px;" id=""><img src="../icons/lupa.png"
                             alt=""></a>
                     <a href="feed.php" class="one"><img src="../icons/house.svg" alt=""></a>
                     <div class="dropdown">
@@ -53,12 +57,12 @@
                     <a href="../aluno_professor/perfil.php" class="four"><img
                             src="../imagens/<?php echo $nome_img_user; ?>" alt=""></a>
         </div>
-        <div>
-            <?php include '../cruds/pesquisar_perfil.php'; ?>
-        </div>
+        
+    
     </nav>
+    <div id="resultados"></div>
 
-    <form method="post" action="">
+    <!--<form method="post" action="">
         <div class="centroul">
             <div class="containerChat">
                 <img src="../assets/blank-profile-picture-973460__480.png" alt="">
@@ -78,7 +82,7 @@
 
             </div>
         </div>
-    </form>
+    </form>-->
 </body>
 
 </html>
