@@ -155,7 +155,7 @@ div.postagens div.post{
     background: #fff;
     border-radius: 10px;
     max-width: 650px;
-    height: 265px;
+    height: 490px;
     margin: 50px 0;
     padding: 25px;
     width: 100%;
@@ -164,7 +164,6 @@ div.postagens div.post{
 
 div.post div.infoPost{
     display: flex;
-    align-items: center;
 }
 
 div.infoPost h1{
@@ -194,7 +193,7 @@ div.post p{
 }
 
 div.actionButton{
-    margin-top: 15px;
+    margin-top: 7.5rem;
 }
 
 div.actionButton img{
@@ -341,3 +340,7 @@ div.icons{
     margin: 0;
 }
 
+.image img{
+    width: 50%;
+    margin-top: 4rem;
+}

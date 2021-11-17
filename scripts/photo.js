@@ -4,4 +4,5 @@ function myFunction(){
     imagem.addEventListener('click', () => {
         pesquisa.click();
     });
+
 }

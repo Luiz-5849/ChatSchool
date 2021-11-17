@@ -14,20 +14,6 @@ $(document).ready(function(){
              var resultados = JSON.parse(msg);
              var cont = 3;
              var tabela = '';
-             
-             /*for(i = 0; i < 2; i++)
-             {
-                //tabela += '<form method="post" id="" action="">';
-                 //tabela += '<a id="">';
-                 //Tabela += '<div><img src="' + Tabela[i].nome_imagem + '"></div>';
-                 tabela += '<div><p>' + resultados.apelido[i] + '</p></div>';
-                 tabela += '<div><p>' + resultados.nome[i] + '</p></div>';
-                 alert("teste");
-                 tabela = "teste";
-                 //tabela += '<input type="hidden" value="' + resultados.cod_perfil[i] + '">';
-                 //tabela += '</a>';
-                 //tabela += '</form>';
-            }*/
 
             for(i=0; i < cont; i++){
                 tabela += '<a id="">';

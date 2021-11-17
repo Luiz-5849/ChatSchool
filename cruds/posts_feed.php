@@ -54,19 +54,23 @@ if ($comando->rowCount() > 0) {
             <div class="infoPost">
                 <div class="imgPost">
                     <img src="../imagens/' . $nome_imagem . '" alt="">
+                    <hr>
                 </div>
-            
                 <h1>'.$apelido.'</h1>
-                
+        </div>
+
+        <div class="image">        
         <img src="../imagens/' . $linhaIV->nome_imagem . '">
         </div>
-        <p>
-            '. $descricao .'
-        </p>
+
         <div class="actionButton">
             <button type="button" class="filePostheart"><img src="../icons/12138redheart_110427.png" alt="Curtir">Curtir</button>
             <button type="button" class="filePost"><img src="../icons/commentlinear_106230.png" alt="Comentar">Comentar</button>
         </div>
+
+        <p>
+            '. $descricao .'
+        </p>
     </div>
 </div> ';
     
