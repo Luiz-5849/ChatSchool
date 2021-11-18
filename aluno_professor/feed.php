@@ -32,7 +32,7 @@
                       <a href="resultados_pesquisa.php">
                         <input class="form-nav" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1" name="pesquisar">
                       </a>
-                    </li> 
+                    </li>
                 </ul>
                     <ul class="nav justify-content-end col-4">
                         <li class="nav-item">
