@@ -86,6 +86,33 @@
         <br><br>
         create database bancotcc;<br>
         <br>
+        create table imagens(<br>
+        cod_imagem int primary key auto_increment,<br>
+        imagem blob null,<br>
+        nome_imagem varchar(100) not null<br>
+        );<br>
+        <br>
+        create table escolas(<br>
+        cod_escola int primary key auto_increment,<br>
+        nome_escola varchar(50) not null<br>
+        );<br>
+        <br>
+        create table cursos(<br>
+        cod_curso int not null primary key auto_increment,<br>
+        nome_curso varchar(50)<br>
+        );<br>
+        <br>
+        create table turma(<br>
+        cod_turma int primary key auto_increment,<br>
+        nome_turma varchar(3) null,<br>
+        cod_curso int,<br>
+        foreign key(cod_curso) references cursos(cod_curso),<br>
+        periodo varchar(5) not null,<br>
+        cod_escola int not null,<br>
+        foreign key (cod_escola) references escolas(cod_escola),<br>
+        modulo_ano int null<br>
+        );<br>
+        <br>
         create table perfil(<br>
         cod_perfil int primary key auto_increment,<br>
         nome varchar(50) null,<br>
@@ -99,6 +126,14 @@
         login varchar(40) not null,<br>
         senha varchar(15) not null,<br>
         acesso int not null<br>
+        );<br>
+        <br>
+        create table enturmando(<br>
+        cod_enturmando int not null primary key auto_increment,<br>
+        cod_turma int not null,<br>
+        foreign key (cod_turma) references turma(cod_turma),<br>
+        cod_perfil int not null,<br>
+        foreign key (cod_perfil) references perfil(cod_perfil)<br>
         );<br>
         <br>
         create table seguidores(<br>
@@ -136,22 +171,6 @@
         foreign key(cod_post) references postagens(cod_post)<br>
         );<br>
         <br>
-        create table turma(<br>
-        cod_turma int primary key auto_increment,<br>
-        nome_turma varchar(3) null,<br>
-        cod_curso int,<br>
-        foreign key(cod_curso) references cursos(cod_curso),<br>
-        periodo varchar(5) not null,<br>
-        cod_escola int not null,<br>
-        foreign key (cod_escola) references escolas(cod_escola),<br>
-        modulo_ano int null<br>
-        );<br>
-        <br>
-        create table escolas(<br>
-        cod_escola int primary key auto_increment,<br>
-        nome_escola varchar(50) not null<br>
-        );<br>
-        <br>
         create table comunicados(<br>
         cod_comunicado int primary key auto_increment,<br>
         cod_turma int null,<br>
@@ -162,13 +181,8 @@
         cod_perfil int null,<br>
         foreign key(cod_perfil) references perfil(cod_perfil),<br>
         cod_escola int null,<br>
-        foreign key(cod_escola) references escolas(cod_escola)<br>
-        );<br>
-        <br>
-        create table imagens(<br>
-        cod_imagem int primary key auto_increment,<br>
-        imagem blob null,<br>
-        nome_imagem varchar(100) not null<br>
+        foreign key(cod_escola) references escolas(cod_escola),<br>
+        data_comunicado date not null<br>
         );<br>
         <br>
         create table mensagens(<br>
@@ -180,19 +194,6 @@
         foreign key(destinatario) references perfil(cod_perfil),<br>
         data_mensagem date not null,<br>
         hora_mensagem time not null<br>
-        );<br>
-        <br>
-        create table enturmando(<br>
-        cod_enturmando int not null primary key auto_increment,<br>
-        cod_turma int not null,<br>
-        foreign key (cod_turma) references turma(cod_turma),<br>
-        cod_perfil int not null,<br>
-        foreign key (cod_perfil) references perfil(cod_perfil)<br>
-        );<br>
-        <br>
-        create table cursos(<br>
-        cod_curso int not null primary key auto_increment,<br>
-        nome_curso varchar(50)<br>
         );<br>
         <br><br>
         -- SELECTS<br>

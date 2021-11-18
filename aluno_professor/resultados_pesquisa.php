@@ -57,10 +57,12 @@
                     <a href="../aluno_professor/perfil.php" class="four"><img
                             src="../imagens/<?php echo $nome_img_user; ?>" alt=""></a>
         </div>
-        
-    
     </nav>
+    <!--Fim da Barra de Navegação-->
+
+    <!--Exibição dos resultados-->
     <div id="resultados"></div>
+    
 
     <!--<form method="post" action="">
         <div class="centroul">

@@ -16,8 +16,8 @@ $(document).ready(function(){
              var tabela = '';
 
             for(i=0; i < cont; i++){
-                tabela += '<a id="">';
                 tabela += '<form method="post" action="">';
+                tabela += '<a id="">';
                 //tabela += '<div class="centroul">';
                 //tabela += '<div class="containerChat">';
                 tabela +=    '<img src="../assets/blank-profile-picture-973460__480.png" alt="">';
@@ -33,10 +33,10 @@ $(document).ready(function(){
                 tabela += '</p>';
                 tabela +=        '</div>';
                 tabela +=    '</div>';
+                tabela += '</a>';
                 //tabela += '</div>';
                 //tabela += '</div>';
                 tabela += '</form>';
-                tabela += '</a>';
             }
             
             $('#resultados').html(tabela);
