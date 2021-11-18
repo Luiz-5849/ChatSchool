@@ -1,166 +1,208 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    -webkit-font-smoothing: antialiased !important;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased !important;
 }
 
-.container img{
-    width: 60px;
+.container img {
+  width: 60px;
 }
 
-.nav-top{
-    height: 85px; 
-    background-color: white !important; 
-    border-top:0.5px solid #dbdbdb; 
-    border-bottom:1px solid #dbdbdb;
-    box-shadow: 0px 1px 8px 1px rgb(218, 214, 214);
+.nav-top {
+  height: 85px;
+  background-color: white !important;
+  border-top: 0.5px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  box-shadow: 0px 1px 8px 1px rgb(218, 214, 214);
 }
 
-.nav-container{
-    padding-left: 12% !important; 
-    padding-right: 12% !important;
+.nav-container {
+  padding-left: 12% !important;
+  padding-right: 12% !important;
 }
 
-.icons img{
-    border-radius: 100%;
-    -o-border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    margin-left: 35px;
-    width: 25px;
+.icons img {
+  border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  margin-left: 35px;
+  width: 25px;
 }
 
-.form-control{
-    border: none;
-    background-color: rgb(235, 233, 233);
-    padding: 10px 50px;
-    border-radius: 25px;
-    width: 34.3rem;
+.form-control {
+  border: none;
+  background-color: rgb(235, 233, 233);
+  padding: 10px 50px;
+  border-radius: 25px;
+  width: 34.3rem;
 }
 
-.icons img:hover{
-    border-radius: 100%;
-    -o-border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    width: 28px;
-    transition: 0.2s;
+.icons img:hover {
+  border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  width: 28px;
+  transition: 0.2s;
 }
 
-.perfil{
-    margin-top: 15px;
-    background-color: black;
-    border-radius: 100%;
-    -o-border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%; 
-    max-width:200px; 
-    max-height:150px;
+.perfil {
+  margin-top: 15px;
+  background-color: black;
+  border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  max-width: 200px;
+  max-height: 150px;
 }
 
 .username {
-    font-weight: 500; 
-    font-size: 30px;
+  font-weight: 500;
+  font-size: 30px;
 }
 
 .name {
-    font-size: 16px; 
-    display: inline; 
-    font-weight: 600 !important;
+  font-size: 16px;
+  display: inline;
+  font-weight: 600 !important;
 }
 
 .profile-datas {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .profile-desc {
-    font-size: 16px; 
+  font-size: 16px;
 }
 
-.col-3{
-    padding-top: 20px;
+.col-3 {
+  padding-top: 20px;
 }
 
-.col-7{
-    padding-top: 35px;
+.col-7 {
+  padding-top: 35px;
 }
 
-.nav-post{
-    border-bottom: none !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 15px;
-    margin-top: 10px;
+.nav-post {
+  border-bottom: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15px;
+  margin-top: 10px;
 }
 
-.nav-publi-1{
-    color: gray;
-    background-color: #fff;
-    border-color: gray #fff #fff;
-    border-top-right-radius: .0rem;
-    border-top-left-radius: .0rem;
-    font-size: 15px;
-    font-weight: 500;
+.nav-publi-1 {
+  color: gray;
+  background-color: #fff;
+  border-color: gray #fff #fff;
+  border-top-right-radius: 0rem;
+  border-top-left-radius: 0rem;
+  font-size: 15px;
+  font-weight: 500;
 }
 
-.nav-publi-1 i{
-    margin-right: 10px;
+.nav-publi-1 i {
+  margin-right: 10px;
 }
 
-.nav-publi-1 i:hover{
-    color: black;
-    transition: 0.1s;
-    background-color: rgb(241, 235, 235);
-    border-radius: 30px;
+.nav-publi-1 i:hover {
+  color: black;
+  transition: 0.1s;
+  background-color: rgb(241, 235, 235);
+  border-radius: 30px;
 }
 
-.card-group{
-    margin-left: 15px;
+.card-group {
+  margin-left: 15px;
 }
-.col-3 img{
-    margin-left: 10px;
-    width: 85%;
-    height: 90%;
-}
-
-.col-3 img:hover{
-    border: 3px solid rgb(0, 0, 0);
-    opacity: 0.8;
-    transition: 0.2s;
+.col-3 img {
+  margin-left: 10px;
+  width: 85%;
+  height: 90%;
 }
 
-.btn-profile{
-    border: none;
-    margin-top: 15px;
-    background-color: #d8e1e7;
-    padding: 3px;
-    border-radius: 8px;
-    color: black;
-    box-shadow: 0px 1px 8px 1px rgba(212, 208, 208, 0.5);
-    font-size: 16px;
-    font-weight: 400;
+.col-3 img:hover {
+  border: 3px solid rgb(0, 0, 0);
+  opacity: 0.8;
+  transition: 0.2s;
 }
 
-input[type='file']{
-    display: none;
+.btn-profile {
+  border: none;
+  margin-top: 15px;
+  background-color: #d8e1e7;
+  padding: 3px;
+  border-radius: 8px;
+  color: black;
+  box-shadow: 0px 1px 8px 1px rgba(212, 208, 208, 0.5);
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.images{
-    max-width: 500px;
-    width: 100%;
+input[type='file'] {
+  display: none;
 }
 
-.ImageContainer img{
-    margin-top: 15px;
-    background-color: black;
-    border-radius: 100%;
-    -o-border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%; 
-    max-width:200px; 
-    max-height:150px;
-    cursor: pointer;
+.images {
+  max-width: 500px;
+  width: 100%;
+}
+
+.ImageContainer img {
+  margin-top: 15px;
+  background-color: black;
+  border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  max-width: 200px;
+  max-height: 150px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+.dropbtn {
+  background-color: rgb(250, 246, 246);
+  color: white;
+  padding: 5px 13px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #ffffff;
+  transition: 0.8s;
 }
