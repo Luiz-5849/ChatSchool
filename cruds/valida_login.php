@@ -20,7 +20,6 @@ $comando = $con->prepare("select cod_perfil, acesso, cod_escola from perfil wher
 $comando->bindParam(1, $login);
 $comando->bindParam(2, $senha);
 $comando->bindParam(3, $acesso);
-
 $comando->execute();
 $cod = $comando->fetch(PDO::FETCH_OBJ);
 
