@@ -26,4 +26,4 @@ $comandoIII->bindParam(1, $cod_img);
 $comandoIII->bindParam(2, $cod);
 $comandoIII->execute();
 
-echo $cod;
+header("location:../aluno_professor/perfil.php");

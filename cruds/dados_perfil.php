@@ -61,6 +61,9 @@ $comandoV->bindParam(1, $cod);
 $comandoV->execute();
 if($comandoV->rowCount()>0){
     $dados = $comandoV->fetch(PDO::FETCH_OBJ);
+    if($dados->nome_imagem == null || $dados->nome_imagem == ""){
+        $imagem = "blank-profile-picture-973460__480.png";
+    }
     $imagem = $dados->nome_imagem;
 }else{
     $imagem = "blank-profile-picture-973460__480.png";

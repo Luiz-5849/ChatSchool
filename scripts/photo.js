@@ -6,7 +6,7 @@ function myFunction(){
     pesquisa.click();
     });
     
-    var formData = new FormData(document.getElementById("imagem_perfil"));
+    /*var formData = new FormData(document.getElementById("imagem_perfil"));
 
     $.ajax({
         type: 'POST',
@@ -20,11 +20,26 @@ function myFunction(){
         /*beforeSend: function(){
             alert('Erro envio');
         },*/
-
-        success: function(msg){
-
-            //location.href = "perfil.php";
-           
-        }
-    });
 }
+
+/*$(document).ready(function(){
+
+    $('#alt_img').click(function(){
+        var formData = new FormData(document.getElementById("imagem_perfil"));
+
+        $.ajax ({
+            method: 'POST',
+            url: '../cruds/cad_img.php',
+            data: formData,
+            contentType: false,
+            cache: false,
+            processData: false,
+        })
+
+        .done(function(msg)
+        {
+            location.reload();
+        })
+        return false;
+    })
+});*/
