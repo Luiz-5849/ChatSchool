@@ -11,3 +11,4 @@ $comando->execute();
 while ($linha = $comando->fetch(PDO::FETCH_OBJ)){
     echo '<option value="'. $linha->cod_turma .'">'. $linha->modulo_ano .'º'. $linha->nome_turma .' - '. $linha->nome_curso .' - '. $linha->periodo .'</option>';
 }
+?>
