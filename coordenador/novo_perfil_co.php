@@ -8,7 +8,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="main.js"></script>
     <link rel="stylesheet" href="../css/novoperfil_co.css">
     <title>NOVO - Perfil</title>
 </head>
@@ -33,9 +32,11 @@
 
         <div class="Drop">
             <select name="turma">
-                <option value="null" selected>Selecione</option>
+                <option value="null" selected>turma</option>
                 <option value="null">--</option>
-                <?php include '../cruds/option_turmas.php'; ?>
+                <?php 
+                    include '../cruds/option_turmas.php'; 
+                ?>
             </select>
         </div>
 
