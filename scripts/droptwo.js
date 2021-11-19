@@ -1,4 +1,4 @@
-function myFunction() {
+function Funcao() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
 
