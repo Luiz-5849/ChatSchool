@@ -15,13 +15,16 @@ function myFunction(){
         contentType: false,
         cache: false,
         processData: false,
+       
 
         /*beforeSend: function(){
             alert('Erro envio');
         },*/
 
         success: function(msg){
+
             //location.href = "perfil.php";
+           
         }
     });
 }
