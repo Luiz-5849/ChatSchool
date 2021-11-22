@@ -149,7 +149,7 @@
         cod_perfil int not null,<br>
         foreign key(cod_perfil) references perfil(cod_perfil),<br>
         descricao_post varchar(70) null,<br>
-        hora_post timestamp not null,<br>
+        data_post timestamp not null,<br>
         cod_imagem int null,<br>
         foreign key(cod_imagem) references imagens(cod_imagem)<br>
         );<br>
