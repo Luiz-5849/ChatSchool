@@ -41,14 +41,46 @@ if ($comando->rowCount() > 0) {
         $descricao = $linhaIII->descricao_post;
         $cod_imagem = $linhaIII->cod_imagem;
 
-        $comandoIV = $con->prepare("SELECT nome_imagem from imagens where cod_imagem = ?");
-        $comandoIV->bindParam(1, $cod_imagem);
-        $comandoIV->execute();
+        if($cod_imagem != "" || $cod_imagem != null){
 
-        $linhaIV = $comandoIV->fetch(PDO::FETCH_OBJ);
+            $comandoIV = $con->prepare("SELECT nome_imagem from imagens where cod_imagem = ?");
+            $comandoIV->bindParam(1, $cod_imagem);
+            $comandoIV->execute();
+
+            $linhaIV = $comandoIV->fetch(PDO::FETCH_OBJ);
 
 
-        //Comando para, se houver apenas uma imagem no post
+            //Comando para puxar o post se houver imagem nele
+            echo '<div class="postagens" id="postFeed">
+            <div class="post">
+                    <div class="infoPost">
+                        <div class="imgPost">
+                            <img src="../imagens/' . $nome_imagem . '" alt="">
+                            <hr>
+                        </div>
+                        <h1>'.$apelido.'</h1>
+                </div>
+                
+                <div class="desc">
+                    <p>' . $descricao . '</p>
+                </div>
+
+                <div class="image">        
+                <img src="../imagens/' . $linhaIV->nome_imagem . '">
+                </div>
+
+                
+                <div class="actionButton">
+                    <button type="button" class="filePostheart"><img src="../icons/12138redheart_110427.png" alt="Curtir">Curtir</button>
+                    <button type="button" class="filePost"><img src="../icons/commentlinear_106230.png" alt="Comentar">Comentar</button>
+                </div>
+
+            
+                </div>
+            </div> ';
+        }else{
+
+        //Comando para puxar imagem se não houver imagem
         echo '<div class="postagens" id="postFeed">
         <div class="post">
             <div class="infoPost">
@@ -62,12 +94,6 @@ if ($comando->rowCount() > 0) {
         <div class="desc">
             <p>' . $descricao . '</p>
         </div>
-
-        <div class="image">        
-        <img src="../imagens/' . $linhaIV->nome_imagem . '">
-        </div>
-
-          
         <div class="actionButton">
             <button type="button" class="filePostheart"><img src="../icons/12138redheart_110427.png" alt="Curtir">Curtir</button>
             <button type="button" class="filePost"><img src="../icons/commentlinear_106230.png" alt="Comentar">Comentar</button>
@@ -77,6 +103,6 @@ if ($comando->rowCount() > 0) {
     </div>
 </div> ';
     
-        
+        }
     }
 }
