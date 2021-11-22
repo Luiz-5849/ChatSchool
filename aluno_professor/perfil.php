@@ -33,18 +33,17 @@
 
       <div class="icons">
         <a href="feed.php" class="one"><img src="../icons/house.svg" alt=""></a>
-        <div class="dropdown">
+        <!--<div class="dropdown">
           <button onclick="myFunction()" class="dropbtn"><img src="../icons/gear-wide.svg" alt=""></button>
           <div id="myDropdown" class="dropdown-content">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="../cruds/deslogar.php">Sair</a>
           </div>
-        </div>
-        <!--
-                <a href="#" class="two"><img src="../icons/gear-wide.svg" alt=""></a>
-                <a href="../cruds/deslogar.php" class="three"><img src="../icons/door-open-fill.svg" alt=""></a>!-->
-
+        </div>-->
+        
+        <a href="#" class="two"><img src="../icons/gear-wide.svg" alt=""></a>
+        <a href="../cruds/deslogar.php" class="three"><img src="../icons/door-open-fill.svg" alt=""></a>
         <a href="perfil.php" class="four"><img src="../imagens/<?php echo $imagem; ?>" alt=""></a>
       </div>
     </div>
