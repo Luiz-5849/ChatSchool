@@ -28,13 +28,13 @@ if (isset($_FILES['arquivo']['name'])) {
     $linha = $comandoII->fetch(PDO::FETCH_OBJ);
     $cod_img = $linha->cod_imagem;
 
-    $comandoIII = $con->prepare("insert into postagens (cod_perfil, descricao_post, hora_post, cod_imagem) values (?, ?, now(), ?)");
+    $comandoIII = $con->prepare("insert into postagens (cod_perfil, descricao_post, data_post, cod_imagem) values (?, ?, now(), ?)");
     $comandoIII->bindParam(1, $cod);
     $comandoIII->bindParam(2, $descricao);
     $comandoIII->bindParam(3, $cod_img);
     $comandoIII->execute();
 }else{
-    $comandoIV = $con->prepare("insert into postagens (cod_perfil, descricao_post, hora_post) values (?, ?, now())");
+    $comandoIV = $con->prepare("insert into postagens (cod_perfil, descricao_post, data_post) values (?, ?, now())");
     $comandoIV->bindParam(1, $cod);
     $comandoIV->bindParam(2, $descricao);
     $comandoIV->execute();

@@ -9,7 +9,7 @@ $comando->execute();
 while ($linha = $comando->fetch(PDO::FETCH_OBJ)){
     $cod_turma = $linha->cod_turma;
 
-    $comandoII = $con->prepare("SELECT comunicado from comunicados where cod_turma = ?");
+    $comandoII = $con->prepare("SELECT comunicado from comunicados where cod_turma = ? order by data_comunicado desc");
     $comandoII->bindParam(1, $cod_turma);
     $comandoII->execute();
     

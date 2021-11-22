@@ -182,7 +182,7 @@
         foreign key(cod_perfil) references perfil(cod_perfil),<br>
         cod_escola int null,<br>
         foreign key(cod_escola) references escolas(cod_escola),<br>
-        data_comunicado date not null<br>
+        data_comunicado timestamp not null<br>
         );<br>
         <br>
         create table mensagens(<br>
