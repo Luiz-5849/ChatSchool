@@ -12,7 +12,7 @@ $extensão_arquivo = pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION);
 $arquivo_tmp = $_FILES['arquivo']['tmp_name'];
 
 
-if (isset($_FILES['arquivo']['name'])) {
+if ($arquivo_atual != null || $arquivo_atual != "") {
     $destino = "../imagens/" . $arquivo_atual;
     move_uploaded_file($arquivo_tmp, $destino);
 
