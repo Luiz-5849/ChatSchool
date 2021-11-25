@@ -153,7 +153,7 @@ input[type='file'] {
   width: 100%;
 }
 
-#image{
+#image {
   object-fit: cover;
 }
 
@@ -210,4 +210,21 @@ input[type='file'] {
 
 .dropdown a:hover {
   background-color: #ddd;
+}
+
+.btn-image {
+  margin-left: 2.6rem;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  border: none;
+  background-color: dodgerblue;
+  color: white;
+  font-weight: 600;
+  border-radius: 25px;
+  box-shadow: 0px 0px 8px 0px rgba(165, 159, 159, 0.692);
+}
+
+.btn-image:hover {
+  transition: 0.6s;
+  background-color: rgb(13, 95, 177);
 }

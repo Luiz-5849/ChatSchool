@@ -41,7 +41,7 @@
             <a href="../cruds/deslogar.php">Sair</a>
           </div>
         </div>-->
-        
+
         <a href="#" class="two"><img src="../icons/gear-wide.svg" alt=""></a>
         <a href="../cruds/deslogar.php" class="three"><img src="../icons/door-open-fill.svg" alt=""></a>
         <a href="perfil.php" class="four"><img src="../imagens/<?php echo $imagem; ?>" alt=""></a>
@@ -65,7 +65,7 @@
                   <img onclick="myFunction()" title="Editar" src="../imagens/<?php echo $imagem; ?>" alt="Selecione uma Imagem" id="image">
                   <form action="../cruds/cad_img.php" method="POST" enctype="multipart/form-data" name="imagem_perfil" id="imagem_perfil">
                     <input type="file" id="imgInput" name="flImage" accept="image/*">
-                    <input type="submit" value="enviar" id="alt_img">
+                    <input class="btn-image" type="submit" value="Enviar" id="alt_img">
                   </form>
                 </div>
               </div>
