@@ -27,7 +27,7 @@
           <form class="d-flex">
             <input class="form-control" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1">
         </form>
-        
+
             <div class="icons">
                 <a href="feed.php" class="one"><img src="../icons/house.svg" alt=""></a>
                 <a href="#" class="two"><img src="../icons/gear-wide.svg" alt=""></a>
@@ -78,9 +78,15 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
+                                        <form action="" method="post">
                                       <input type="submit" value="seguir">
+                                      <input type="hidden" value="<?php echo $cod; ?>" name="seguir">
+                                      </form>
                                         <p class="profile-desc">
                                             <?php echo $bio; ?>
+                                            <form action="" method="post">
+                                            <input type="submit" value="adicionar bio">
+                                            </form>
                                         </p>
                                     </div>
                                 </div>
