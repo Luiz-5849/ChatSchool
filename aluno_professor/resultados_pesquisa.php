@@ -32,13 +32,7 @@
                 <a href="feed.php"><img src="../assets/logo.png" alt=""></a>
             </nav>
             <ul class="nav justify-content-center nav-fixed col-4">
-                <form method="get" id="pesquisa">
-                <li class="nav-item">
-                    <input class="form-nav" type="search" placeholder="@    Search" aria-label="Search"
-                        aria-describedby="basic-addon1" name="pesquisar">
-                </li>
-                <input type="submit" value="enviar" id="enviar">
-                </form>
+                <h2>RESULTADOS PARA "<?php echo $_POST['pesquisar']; ?>"</h2>
             </ul>
             <ul class="nav justify-content-end col-4">
                 <li class="nav-item">
@@ -61,7 +55,7 @@
     <!--Fim da Barra de Navegação-->
 
     <!--Exibição dos resultados-->
-    <div id="resultados"></div>
+    <div id="resultados"><?php include '../cruds/pesquisar_perfil.php'; ?></div>
     
 
     <!--<form method="post" action="">
