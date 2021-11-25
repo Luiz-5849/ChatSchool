@@ -11,5 +11,6 @@ $comando->bindParam(1, $bio);
 $comando->bindParam(2, $cod);
 $comando->execute();
 
+header('location:../aluno_professor/perfil.php');
 
 ?>
