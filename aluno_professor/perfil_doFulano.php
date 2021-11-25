@@ -13,9 +13,8 @@
     <script src="../scripts/dropdownprofile.js"></script>
     <script src="../scripts/photo.js"></script>
     <?php
-
-    include '../cruds/dados_perfil.php';
-
+    $cod = $_POST['cod_perfil'];
+      include '../cruds/dados_perfilFulano.php';
     ?>
     <title>PERFIL</title>
 </head>
@@ -54,7 +53,7 @@
                             </div>!-->
 
                               <div class="ImageContainer">
-                                <img onclick="myFunction()" src="../imagens/blank-profile-picture-973460__480.png" alt="Selecione uma Imagem" id="image">
+                                <img onclick="myFunction()" src="../imagens/<?php echo $imagem; ?>" alt="Selecione uma Imagem" id="image">
                                 <form action="">
                                   <input onclick="myFunction()" type="file" id="imgInput" name="flImage" accept="image/*">
                               </form>
@@ -79,6 +78,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
+                                      <input type="submit" value="seguir">
                                         <p class="profile-desc">
                                             <?php echo $bio; ?>
                                         </p>
@@ -99,39 +99,11 @@
                     </ul>
 
                     <?php
-                    include '../cruds/posts_perfil.php';
+                    include '../cruds/posts_perfilFulano.php';
                     ?>
-                    <!--
-                    <div class="card-group">
-                        <div class="col-3">
-                            <img src="assets/seth-doyle-n_t_TjP914o-unsplash.jpg" class="card-img-top" alt="...">
-                          </div>
-                        <div class="col-3">
-                          <img src="assets/marco-mons-ilcYo42yIT8-unsplash.jpg" class="card-img-top" alt="...">
-                        </div>
-                        <div class="col-3">
-                          <img src="assets/roland-denes-Ve8yy0Oi1rE-unsplash.jpg" class="card-img-top" alt="...">                         
-                        </div>
-                        <div class="col-3">
-                          <img src="assets/lorenzo-gerosa-bA1gX_rQAAk-unsplash.jpg" class="card-img-top" alt="...">
-                        </div>
-                      </div>
 
-                      <div class="card-group">
-                        <div class="col-3">
-                            <img src="assets/liam-martens-2DUnI5ltoR4-unsplash.jpg" class="card-img-top" alt="...">
-                          </div>
-                        <div class="col-3">
-                          <img src="assets/artyom-kanshin-xqtRMtOqS_0-unsplash.jpg" class="card-img-top" alt="...">
-                        </div>
-                        <div class="col-3">
-                          <img src="assets/tom-chrostek-uGXcMzBgjcs-unsplash.jpg" class="card-img-top" alt="...">                         
-                        </div>
-                        <div class="col-3">
-                          <img src="assets/tyler-nix-SLIwtuPqwfc-unsplash.jpg" class="card-img-top" alt="...">
-                        </div>
-                      </div>
--->
+
+
                 </div>
                 <div class="col-0 col-md-2"></div>
             </div>
