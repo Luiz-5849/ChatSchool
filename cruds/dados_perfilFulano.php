@@ -1,7 +1,22 @@
 <?php
 
 include 'conexao.php';
+session_start();
+$cod_user = $_SESSION['cod_perfil'];
 
+//comando para puxar img do usuário p/ exibí-la na nav bar
+$comando = $con->prepare("select imagens.nome_imagem from imagens inner join perfil on perfil.cod_imagem = imagens.cod_imagem where perfil.cod_perfil = ?");
+$comando->bindParam(1, $cod_user);
+$comando->execute();
+if($comando->rowCount()>0){
+    $dadosII = $comando->fetch(PDO::FETCH_OBJ);
+    if($dadosII->nome_imagem == null || $dadosII->nome_imagem == ""){
+        $imagem_user = "blank-profile-picture-973460__480.png";
+    }
+    $imagem_user = $dadosII->nome_imagem;
+}else{
+    $imagem_user = "blank-profile-picture-973460__480.png";
+}
 
 //Comando para puxar o nome e a bio
 $comandoI = $con->prepare("select apelido, bio from perfil where cod_perfil = ?");
