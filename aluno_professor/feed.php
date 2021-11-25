@@ -29,14 +29,14 @@
       </nav>
       <ul class="nav justify-content-center nav-fixed col-4">
         <li class="nav-item">
-          <a href="resultados_pesquisa.php">
+          <form name="" id="" method="post" action="resultados_pesquisa.php">
             <input class="form-nav" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1" name="pesquisar">
-          </a>
+            <button type="submit"><img src="../icons/lupa.png" alt=""></button>
+          </form>
         </li>
       </ul>
       <ul class="nav justify-content-end col-4">
         <li class="nav-item">
-          <a style="margin-right: 120px;" href="resultados_pesquisa.php" id="lupa"><img src="../icons/lupa.png" alt=""></a>
           <a href="feed.php" class="one"><img src="../icons/house.svg" alt=""></a>
           <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn"><img src="../icons/gear-wide.svg" alt=""></button>
