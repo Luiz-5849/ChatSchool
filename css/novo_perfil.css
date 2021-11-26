@@ -7,7 +7,7 @@
 } 
 
 body{
-    background: #172236;
+    background: #ffffff;
 }
 
 .center{
@@ -16,9 +16,10 @@ body{
     left: 50%;
     transform: translate(-50%, -45%);
     width: 400px;
+    height: 530px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0px 1px 8px 1px rgba(29, 32, 46, 0.658);
+    box-shadow: 0px 1px 8px 1px rgba(149, 152, 167, 0.658);
 }
 
 .center h1{
@@ -102,6 +103,7 @@ form .txt_field{
 }
 
 input[type="submit"]{
+    margin-top: 1.5rem;
     width: 100%;
     height: 50px;
     border: 1px solid;
@@ -117,5 +119,25 @@ input[type="submit"]{
 input[type="submit"]:hover{
     border-color: #2691d9;
     transition: .5s;
+}
+
+.form-select{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 1rem;
+    border: none;
+    border-bottom: #2691d9 2px solid;
+}
+
+.waves{
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
