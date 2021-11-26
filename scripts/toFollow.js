@@ -11,7 +11,7 @@ $(document).ready(function(){
 
         .done(function(msg)
         {
-            alert("Agora você segue essa pessoa");
+            alert(msg);
         })
         return false;
     })
