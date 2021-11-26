@@ -90,6 +90,9 @@
                   <div class="col-12">
                     <p class="profile-desc">
                       <?php echo $bio; ?>
+                    <form action="bio.html" method="post">
+                      <input type="submit" value="adicionar bio">
+                    </form>
                     </p>
                   </div>
                 </div>

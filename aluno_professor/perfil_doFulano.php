@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,27 +12,27 @@
     <link rel="stylesheet" href="../css/perfil.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../scripts/dropdownprofile.js"></script>
+    <script src="../scripts/toFollow.js"></script>
     <?php
     $cod = $_POST['cod_perfil'];
-      include '../cruds/dados_perfilFulano.php';
+    include '../cruds/dados_perfilFulano.php';
     ?>
     <title>PERFIL</title>
 </head>
+
 <body>
     <nav class="navbar navbar-light bg-light nav-top">
         <div class="container nav-container">
-          <a class="navbar-brand" href="#">
-            <a href="feed.php"><img src="../assets/logo.png" alt=""></a>
-          </a>
-          <form class="d-flex">
-            <input class="form-control" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1">
-        </form>
+            <a class="navbar-brand" href="#">
+                <a href="feed.php"><img src="../assets/logo.png" alt=""></a>
+            </a>
+            <form class="d-flex">
+                <input class="form-control" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1">
+            </form>
 
             <div class="icons">
                 <a href="feed.php" class="one"><img src="../icons/house.svg" alt=""></a>
                 <a href="#" class="two"><img src="../icons/gear-wide.svg" alt=""></a>
-
-
                 <a href="../cruds/deslogar.php" class="three"><img src="../icons/door-open-fill.svg" alt=""></a>
                 <a href="perfil.php" class="four"><img src="../imagens/<?php echo $imagem_user; ?>" alt=""></a>
             </div>
@@ -47,14 +47,14 @@
                         <div class="row">
                             <div class="col-3">
 
-                               <!--<div class="col-3">
+                                <!--<div class="col-3">
                                 <input type="file" id="flImage" name="flImage" accept="image/*">
                                 <img class="perfil" src="../imagens/<?php echo $imagem; ?>" alt="Selecione uma Imagem" id="imgPhoto">
                             </div>!-->
 
-                              <div class="ImageContainer">
-                                <img src="../imagens/<?php echo $imagem; ?>" alt="Selecione uma Imagem" id="image">
-                              </div>
+                                <div class="ImageContainer">
+                                    <img src="../imagens/<?php echo $imagem; ?>" alt="Selecione uma Imagem" id="image">
+                                </div>
                             </div>
                             <div class="col-7">
                                 <div class="row">
@@ -70,48 +70,46 @@
                                         <p class="profile-datas"><strong><?php echo $seguidores; ?></strong> seguidores</p>
                                     </div>
                                     <div class="col-4">
-                                        <p class="profile-datas"><strong><?php echo $seguindo; ?></strong > seguindo</p>
+                                        <p class="profile-datas"><strong><?php echo $seguindo; ?></strong> seguindo</p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
                                         <form action="" method="post" id="seguir_form">
-                                      <input type="submit" value="seguir" id="seguir">
-                                      <input type="hidden" value="<?php echo $cod; ?>" name="seguir">
-                                      </form>
+                                            <input type="submit" value="seguir" id="seguir">
+                                            <input type="hidden" value="<?php echo $cod; ?>" name="seguir">
+                                        </form>
                                         <p class="profile-desc">
                                             <?php echo $bio; ?>
-                                            <form action="" method="post">
-                                            <input type="submit" value="adicionar bio">
-                                            </form>
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            </div>
-                            <div class="col-2"></div>
                         </div>
+                        <div class="col-2"></div>
                     </div>
-
-                    <hr size="3" width="100%" color="#EEEEEE" style="margin: 0%;">
-
-                    <ul class="nav nav-tabs nav-post" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                          <a class="nav-link active nav-publi-1" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><i class="bi bi-grid-3x3-gap"></i>Publicações</a>
-                        </li>
-                    </ul>
-
-                    <?php
-                    include '../cruds/posts_perfilFulano.php';
-                    ?>
-
-
-
                 </div>
-                <div class="col-0 col-md-2"></div>
+
+                <hr size="3" width="100%" color="#EEEEEE" style="margin: 0%;">
+
+                <ul class="nav nav-tabs nav-post" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active nav-publi-1" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><i class="bi bi-grid-3x3-gap"></i>Publicações</a>
+                    </li>
+                </ul>
+
+                <?php
+                include '../cruds/posts_perfilFulano.php';
+                ?>
+
+
+
             </div>
+            <div class="col-0 col-md-2"></div>
+        </div>
         </div>
     </section>
 
 </body>
+
 </html>
