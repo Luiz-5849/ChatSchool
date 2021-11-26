@@ -91,9 +91,9 @@
     <div class="post">
       <div class="infousuario">
         <div class="imagem">
-          <img src="../imagens/<?php echo $nome_img_user; ?>" alt="">
+          <a href="perfil.php"><img src="../imagens/<?php echo $nome_img_user; ?>" alt=""></a>
         </div>
-        <h1><?php echo $apelido_user; ?></h1>
+        <a href="perfil.php"><h1 style="color: black;"><?php echo $apelido_user; ?></h1></a>
       </div>
       <form action="../cruds/toPost.php" enctype="multipart/form-data" class="textPost" id="publiPost" method="post">
         <textarea name="textarea" placeholder="Faça uma publicação:" id="textarea"></textarea>
