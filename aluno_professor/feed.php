@@ -41,8 +41,6 @@
           <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn"><img src="../icons/gear-wide.svg" alt=""></button>
             <div id="myDropdown" class="dropdown-content">
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
               <a href="../cruds/deslogar.php">Sair</a>
             </div>
           </div>
