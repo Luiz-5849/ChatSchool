@@ -14,8 +14,8 @@
     <script src="../scripts/dropdownprofile.js"></script>
     <script src="../scripts/toFollow.js"></script>
     <?php
-    $cod = $_POST['cod_perfil'];
-    include '../cruds/dados_perfilFulano.php';
+        $cod = $_POST['cod_perfil'];
+        include '../cruds/dados_perfilFulano.php';
     ?>
     <title>PERFIL</title>
 </head>
