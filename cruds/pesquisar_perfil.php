@@ -1,18 +1,19 @@
 <?php
 
 include 'conexao.php';
-$cont = 0;
+
+$cod_perfil_user = $_SESSION['cod_perfil'];
 
 if ($_POST['pesquisar'] == null || $_POST['pesquisar'] == "") {
     header("location:../aluno_professor/perfil.php");
 }else{
     $pesquisado = "%" . $_POST['pesquisar'] . "%";
-    //SELECT perfil.apelido, perfil.nome, perfil.cod_perfil, imagens.nome_imagem FROM perfil inner join imagens on perfil.cod_imagem = imagens.cod_imagem where nome like ? or login like ? or apelido like ?
 
-    $comando=$con->prepare("SELECT apelido, nome, cod_perfil, cod_imagem FROM perfil where nome like ? or login like ? or apelido like ?");
-    $comando->bindParam(1,$pesquisado);
+    $comando=$con->prepare("SELECT apelido, nome, cod_perfil, cod_imagem FROM perfil where cod_perfil <> ? and (acesso = 1 or acesso = 2) and (nome like ? or login like ? or apelido like ?)");
+    $comando->bindParam(1,$cod_perfil_user);
     $comando->bindParam(2,$pesquisado);
     $comando->bindParam(3,$pesquisado);
+    $comando->bindParam(4,$pesquisado);
 
     $comando->execute();
     while($linha = $comando->fetch(PDO::FETCH_OBJ)){
@@ -46,7 +47,6 @@ if ($_POST['pesquisar'] == null || $_POST['pesquisar'] == "") {
                     </button>
                 </span>
                 </form>';
-                $cont++;
             }
 }
 
