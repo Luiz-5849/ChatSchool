@@ -23,11 +23,11 @@ if ($comando->rowCount() > 0) {
         $comandoII->bindParam(1, $cod_img_seguido);
         $comandoII->execute();
 
-        if($comandoII->rowCount() > 0){
-            
-        $linhaII = $comandoII->fetch(PDO::FETCH_OBJ);
-        $nome_imagem = $linhaII->nome_imagem;}
-        else{
+        if ($comandoII->rowCount() > 0) {
+
+            $linhaII = $comandoII->fetch(PDO::FETCH_OBJ);
+            $nome_imagem = $linhaII->nome_imagem;
+        } else {
             $nome_imagem = "blank-profile-picture-973460__480.png";
         }
         //FIM
@@ -41,7 +41,7 @@ if ($comando->rowCount() > 0) {
         $descricao = $linhaIII->descricao_post;
         $cod_imagem = $linhaIII->cod_imagem;
 
-        if($cod_imagem != "" || $cod_imagem != null){
+        if ($cod_imagem != "" || $cod_imagem != null) {
 
             $comandoIV = $con->prepare("SELECT nome_imagem from imagens where cod_imagem = ?");
             $comandoIV->bindParam(1, $cod_imagem);
@@ -52,57 +52,61 @@ if ($comando->rowCount() > 0) {
 
             //Comando para puxar o post se houver imagem nele
             echo '<div class="postagens" id="postFeed">
-            <div class="post">
-                    <div class="infoPost">
-                        <div class="imgPost">
-                            <img src="../imagens/' . $nome_imagem . '" alt="">
-                            <hr>
+                    <div class="post">
+                        <div class="infoPost">
+                            <div class="imgPost">
+                                <img src="../imagens/' . $nome_imagem . '" alt="">
+                                <hr>
+                            </div>
+                            <h1>' . $apelido . '</h1>
                         </div>
-                        <h1>'.$apelido.'</h1>
-                </div>
-                
-                <div class="desc">
-                    <p>' . $descricao . '</p>
-                </div>
-
-                <div class="image">        
-                <img src="../imagens/' . $linhaIV->nome_imagem . '">
-                </div>
-
-                
-                <div class="actionButton">
-                    <button type="button" class="filePostheart"><img src="../icons/12138redheart_110427.png" alt="Curtir">Curtir</button>
-                    <button type="button" class="filePost"><img src="../icons/commentlinear_106230.png" alt="Comentar">Comentar</button>
-                </div>
-
-            
-                </div>
-            </div> ';
-        }else{
-
-        //Comando para puxar imagem se não houver imagem
-        echo '<div class="postagens" id="postFeed">
-        <div class="post">
-            <div class="infoPost">
-                <div class="imgPost">
-                    <img src="../imagens/' . $nome_imagem . '" alt="">
-                    <hr>
-                </div>
-                <h1>'.$apelido.'</h1>
-        </div>
-        
-        <div class="desc">
-            <p>' . $descricao . '</p>
-        </div>
-        <div class="actionButton">
-            <button type="button" class="filePostheart"><img src="../icons/12138redheart_110427.png" alt="Curtir">Curtir</button>
-            <button type="button" class="filePost"><img src="../icons/commentlinear_106230.png" alt="Comentar">Comentar</button>
-        </div>
-
-    
-    </div>
-</div> ';
-    
+                        <div class="desc">
+                            <p>' . $descricao . '</p>
+                        </div>
+                        <div class="image">        
+                            <img src="../imagens/' . $linhaIV->nome_imagem . '">
+                        </div>
+                        <div class="actionButton">
+                            <button type="button" class="filePostheart"><img src="../icons/12138redheart_110427.png" alt="Curtir">Curtir</button>
+                            <button type="button" class="filePost"><img src="../icons/commentlinear_106230.png" alt="Comentar">Comentar</button>
+                        </div>
+                    </div>
+                </div> ';
+        } else {
+            //Comando para puxar imagem se não houver imagem
+            echo '<div class="postagens" id="postFeed">
+                    <div class="post">
+                        <div class="infoPost">
+                            <div class="imgPost">
+                                <img src="../imagens/' . $nome_imagem . '" alt="">
+                                <hr>
+                            </div>
+                            <h1>' . $apelido . '</h1>
+                        </div>
+                        <div class="desc">
+                            <p>' . $descricao . '</p>
+                        </div>
+                        <div class="actionButton">
+                            <button type="button" class="filePostheart"><img src="../icons/12138redheart_110427.png" alt="Curtir">Curtir</button>
+                            <button type="button" class="filePost"><img src="../icons/commentlinear_106230.png" alt="Comentar">Comentar</button>
+                        </div>
+                    </div>
+                </div> ';
         }
     }
 }
+
+/*
+<form action="perfil_doFulano.php" method="post">
+    <button type="submit">
+        <div class="infoPost">
+            <div class="imgPost">
+                <img src="../imagens/' . $nome_imagem . '" alt="">
+                <hr>
+            </div>
+            <h1>'.$apelido.'</h1>
+        </div>
+        <input type="hidden" name="cod_perfil" value="'.$linha->cod_doSeguido.'">
+    </button
+</form>
+*/
