@@ -31,7 +31,7 @@
         <li class="nav-item">
           <form name="" id="" method="post" action="resultados_pesquisa.php">
             <input class="form-nav" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1" name="pesquisar">
-            <button type="submit"><img src="../icons/lupa.png" alt=""></button>
+            <button class="btn-pesq" type="submit"><img src="../icons/lupa.png" alt=""></button>
           </form>
         </li>
       </ul>

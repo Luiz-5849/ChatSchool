@@ -29,8 +29,9 @@ if ($_POST['pesquisar'] == null || $_POST['pesquisar'] == "") {
         }else{
             $img = "blank-profile-picture-973460__480.png";
         }
-        echo '<form method="post" action="perfil_doFulano.php">
+        echo '<form class="bloco" method="post" action="perfil_doFulano.php">
                 <span>
+           
                 <button type="submit">
                     <img src="../imagens/' . $img . '" alt="">
                     <div class="container" id="barra">
@@ -45,8 +46,10 @@ if ($_POST['pesquisar'] == null || $_POST['pesquisar'] == "") {
                         </div>
                     </div>
                     </button>
+
                 </span>
-                </form>';
+                </form>
+                ';
             }
 }
 

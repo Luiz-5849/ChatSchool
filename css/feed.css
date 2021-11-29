@@ -246,19 +246,12 @@ div.icons {
 }
 
 .dropbtn {
-  background-color: rgb(250, 246, 246);
-  color: white;
-  padding: 5px 13px;
+  border: solid 2px dodgerblue;
+  background-color: white;
+  padding: 2px 7px;
   font-size: 16px;
-  border: none;
   cursor: pointer;
   border-radius: 25px;
-}
-
-.dropbtn:hover,
-.dropbtn:focus {
-  background-color: #ffffff;
-  transition: 0.8s;
 }
 
 .dropdown {
@@ -297,41 +290,34 @@ div.icons {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -45%);
-  background: rgb(245, 241, 241);
+  background: rgb(255, 255, 255);
   height: 80%;
   width: 545px;
   border-radius: 8px;
-  box-shadow: 0px 1px 8px 0px rgba(136, 137, 138, 0.534);
+  box-shadow: 0px 1px 8px 0px rgba(206, 208, 211, 0.534);
   transition: 0.3s;
 }
 
 .centroul:hover {
-  box-shadow: 0px 1px 8px 0px rgba(27, 27, 27, 0.459);
+  box-shadow: 0px 1px 8px 0px rgba(141, 136, 136, 0.459);
 }
 
 .containerChat {
   position: absolute;
-  display: -webkit-inline-box;
   background: dodgerblue;
   margin-top: 1rem;
   margin-left: 1rem;
   border-radius: 25px;
-  width: 400px;
-  border: 4px solid dodgerblue;
-  transition: 0.3s;
+  width: 500px;
+  height: 180px;
 }
-
-.containerChat:hover {
-  border: 4px solid dodgerblue;
-  box-shadow: 0px 0px 8px 0px dodgerblue;
-}
-
 .containerChat img {
-  width: 50px;
+  width: 100px;
   border-radius: 100%;
   -o-border-radius: 100%;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
+  border: 2px solid rgb(16, 42, 68);
 }
 
 .containerChat p {
@@ -356,4 +342,40 @@ div.icons {
   object-fit: cover;
   margin-left: 1.5rem;
   margin-top: 1rem;
+}
+
+.btn-pesq{
+  position: absolute;
+  margin-top: 0.3rem;
+  margin-left: 1rem;
+  border: none;
+  padding: 2px 7px;
+  border-radius: 25px;
+  border: solid 2px dodgerblue;
+  background-color: white;
+}
+
+.text_pesq{
+  font-size: 20px;
+}
+
+.text_pesq span{
+  color: dodgerblue;
+  font-weight: 700;
+}
+
+.centroul button{
+  background-color: dodgerblue;
+  padding: 2px 8px;
+  margin-left: 1rem;
+  border: none;
+}
+
+.row p{
+  color: black;
+  margin: 0 auto;
+}
+
+.row{
+  margin-left: 5rem;
 }

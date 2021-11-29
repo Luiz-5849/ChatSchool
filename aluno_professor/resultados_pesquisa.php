@@ -32,7 +32,7 @@
                 <a href="feed.php"><img src="../assets/logo.png" alt=""></a>
             </nav>
             <ul class="nav justify-content-center nav-fixed col-4">
-                <h2>RESULTADOS PARA "<?php echo $_POST['pesquisar']; ?>"</h2>
+                <h2 class="text_pesq"><span>RESULTADOS PARA:</span> "<?php echo $_POST['pesquisar']; ?>"</h2>
             </ul>
             <ul class="nav justify-content-end col-4">
                 <li class="nav-item">
@@ -43,8 +43,6 @@
                         <button onclick="myFunction()" class="dropbtn"><img src="../icons/gear-wide.svg"
                                 alt=""></button>
                         <div id="myDropdown" class="dropdown-content">
-                            <a href="#home">Home</a>
-                            <a href="#about">About</a>
                             <a href="../cruds/deslogar.php">Sair</a>
                         </div>
                     </div>
@@ -55,10 +53,11 @@
     <!--Fim da Barra de Navegação-->
 
     <!--Exibição dos resultados-->
-    <div id="resultados"><?php include '../cruds/pesquisar_perfil.php'; ?></div>
+
+    <div class="centroul" id="resultados"><div class="containerChat"><?php include '../cruds/pesquisar_perfil.php'; ?></div></div>
     
 
-    <!--<form method="post" action="">
+   <!-- <form method="post" action="">
         <div class="centroul">
             <div class="containerChat">
                 <img src="../assets/blank-profile-picture-973460__480.png" alt="">
@@ -78,7 +77,7 @@
 
             </div>
         </div>
-    </form>-->
+    </form>!-->
 </body>
 
 </html>
