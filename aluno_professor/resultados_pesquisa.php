@@ -78,6 +78,12 @@
             </div>
         </div>
     </form>!-->
+
+        <div class="circle"></div>
+        </div>
+    <div class="imgHome">
+                <img src="../assets/undraw_handcrafts_tree.svg" alt="">
+            </div>
 </body>
 
 </html>
