@@ -53,37 +53,16 @@
     <!--Fim da Barra de Navegação-->
 
     <!--Exibição dos resultados-->
-
     <div class="centroul" id="resultados"><div class="containerChat"><?php include '../cruds/pesquisar_perfil.php'; ?></div></div>
-    
+    <!--FIM-->
 
-   <!-- <form method="post" action="">
-        <div class="centroul">
-            <div class="containerChat">
-                <img src="../assets/blank-profile-picture-973460__480.png" alt="">
-                <div class="container" id="barra">
-                    <div class="row">
-                        <p class="name_apelido">Lucas Oliveira</p>
-                    </div>
-                    <div class="row">
-                        <p class="name_apelido">@Luca</p>
-                    </div>
-                   
-                    
-                    
-                </div>
+    <div class="circle"></div>
+    </div>
 
-
-
-            </div>
-        </div>
-    </form>!-->
-
-        <div class="circle"></div>
-        </div>
     <div class="imgHome">
-                <img src="../assets/undraw_handcrafts_tree.svg" alt="">
-            </div>
+        <img src="../assets/undraw_handcrafts_tree.svg" alt="">
+    </div>
+    
 </body>
 
 </html>

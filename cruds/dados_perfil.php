@@ -39,8 +39,6 @@ if ($comandoIII->rowCount() > 0) {
     $seguindo = 0;
 }
 
-
-
 //Comando para puxar o numero de seguidores
 $comandoIV = $con->prepare("select * from seguidores where cod_doSeguido = ?");
 $comandoIV->bindParam(1, $cod);
@@ -50,8 +48,6 @@ if ($comandoIV->rowCount() > 0) {
 }else{
     $seguidores = 0;
 }
-
-
 
 //Comando para puxar a foto do perfil
 $comandoV = $con->prepare("select imagens.nome_imagem from imagens inner join perfil on perfil.cod_imagem = imagens.cod_imagem where perfil.cod_perfil = ?");

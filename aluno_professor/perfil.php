@@ -34,16 +34,6 @@
 
       <div class="icons">
         <a href="feed.php" class="one"><img src="../icons/house.svg" alt=""></a>
-        <!--<div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn"><img src="../icons/gear-wide.svg" alt=""></button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="../cruds/deslogar.php">Sair</a>
-          </div>
-        </div>-->
-
-        <!--<a href="#" class="two"><img src="../icons/gear-wide.svg" alt=""></a>-->
         <a href="../cruds/deslogar.php" class="three"><img src="../icons/door-open-fill.svg" alt=""></a>
         <a href="perfil.php" class="four"><img src="../imagens/<?php echo $imagem; ?>" alt=""></a>
       </div>
@@ -57,11 +47,6 @@
           <div class="container">
             <div class="row">
               <div class="col-3">
-
-                <!--<div class="col-3">
-                                <input type="file" id="flImage" name="flImage" accept="image/*">
-                                <img class="perfil" src="../imagens/" alt="Selecione uma Imagem" id="imgPhoto">
-                            </div>!-->
                 <div class="ImageContainer">
                   <img onclick="myFunction()" title="Editar" src="../imagens/<?php echo $imagem; ?>" alt="Selecione uma Imagem" id="image">
                   <form action="../cruds/cad_img.php" method="POST" enctype="multipart/form-data" name="imagem_perfil" id="imagem_perfil">
@@ -112,39 +97,9 @@
         </ul>
 
         <?php
-        include '../cruds/posts_perfil.php';
+          include '../cruds/posts_perfil.php';
         ?>
-        <!--
-                    <div class="card-group">
-                        <div class="col-3">
-                            <img src="assets/seth-doyle-n_t_TjP914o-unsplash.jpg" class="card-img-top" alt="...">
-                          </div>
-                        <div class="col-3">
-                          <img src="assets/marco-mons-ilcYo42yIT8-unsplash.jpg" class="card-img-top" alt="...">
-                        </div>
-                        <div class="col-3">
-                          <img src="assets/roland-denes-Ve8yy0Oi1rE-unsplash.jpg" class="card-img-top" alt="...">
-                        </div>
-                        <div class="col-3">
-                          <img src="assets/lorenzo-gerosa-bA1gX_rQAAk-unsplash.jpg" class="card-img-top" alt="...">
-                        </div>
-                      </div>
 
-                      <div class="card-group">
-                        <div class="col-3">
-                            <img src="assets/liam-martens-2DUnI5ltoR4-unsplash.jpg" class="card-img-top" alt="...">
-                          </div>
-                        <div class="col-3">
-                          <img src="assets/artyom-kanshin-xqtRMtOqS_0-unsplash.jpg" class="card-img-top" alt="...">
-                        </div>
-                        <div class="col-3">
-                          <img src="assets/tom-chrostek-uGXcMzBgjcs-unsplash.jpg" class="card-img-top" alt="...">
-                        </div>
-                        <div class="col-3">
-                          <img src="assets/tyler-nix-SLIwtuPqwfc-unsplash.jpg" class="card-img-top" alt="...">
-                        </div>
-                      </div>
--->
       </div>
       <div class="col-0 col-md-2"></div>
     </div>

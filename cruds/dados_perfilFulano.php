@@ -62,8 +62,6 @@ if ($comandoIV->rowCount() > 0) {
     $seguidores = 0;
 }
 
-
-
 //Comando para puxar a foto do perfil
 $comandoV = $con->prepare("select imagens.nome_imagem from imagens inner join perfil on perfil.cod_imagem = imagens.cod_imagem where perfil.cod_perfil = ?");
 $comandoV->bindParam(1, $cod);

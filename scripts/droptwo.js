@@ -1,4 +1,4 @@
-function Funcao() {
+/*function Funcao() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
 
@@ -14,4 +14,4 @@ function Funcao() {
         }
       }
     }
-  }
+  }*/

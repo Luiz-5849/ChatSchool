@@ -32,7 +32,6 @@
 
             <div class="icons">
                 <a href="feed.php" class="one"><img src="../icons/house.svg" alt=""></a>
-                <!--<a href="#" class="two"><img src="../icons/gear-wide.svg" alt=""></a>-->
                 <a href="../cruds/deslogar.php" class="three"><img src="../icons/door-open-fill.svg" alt=""></a>
                 <a href="perfil.php" class="four"><img src="../imagens/<?php echo $imagem_user; ?>" alt=""></a>
             </div>
@@ -46,12 +45,6 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-3">
-
-                                <!--<div class="col-3">
-                                <input type="file" id="flImage" name="flImage" accept="image/*">
-                                <img class="perfil" src="../imagens/<?php echo $imagem; ?>" alt="Selecione uma Imagem" id="imgPhoto">
-                            </div>!-->
-
                                 <div class="ImageContainer">
                                     <img src="../imagens/<?php echo $imagem; ?>" alt="Selecione uma Imagem" id="image">
                                 </div>
@@ -99,10 +92,8 @@
                 </ul>
 
                 <?php
-                include '../cruds/posts_perfilFulano.php';
+                    include '../cruds/posts_perfilFulano.php';
                 ?>
-
-
 
             </div>
             <div class="col-0 col-md-2"></div>

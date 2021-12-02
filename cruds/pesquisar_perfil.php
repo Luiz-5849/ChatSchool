@@ -52,25 +52,3 @@ if ($_POST['pesquisar'] == null || $_POST['pesquisar'] == "") {
                 ';
             }
 }
-
-/*        echo '<a id="">
-                <form method="post" action="">
-                    <div class="centroul">
-                        <div class="containerChat">
-                            <img src="../imagens/' . $img . '" alt="">
-                            <div class="container" id="barra">
-                                <div class="row">
-                                    <p class="name_apelido">' . $linha->apelido . '</p>
-                                </div>
-                                <div class="row">
-                                    <p class="name_apelido">' . $linha->nome . '</p>
-                                </div>
-                                <div>
-                                    <input type="hidden" value="' . $linha->cod_perfil . '" name="cod_perfil">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </a>';
-*/

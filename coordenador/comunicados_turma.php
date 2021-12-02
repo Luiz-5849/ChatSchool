@@ -26,7 +26,6 @@
 
     <div class="comunit">
         <textarea name="comunicado" id="comunicado" cols="30" rows="3" placeholder="Faça uma Publicação:"></textarea>
-        <!--<input type="text" name="comunicado">!-->
     </div>
 
     <div class="button">

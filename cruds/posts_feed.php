@@ -94,18 +94,3 @@ if ($comando->rowCount() > 0) {
         }
     }
 }
-
-/*
-<form action="perfil_doFulano.php" method="post">
-    <button type="submit">
-        <div class="infoPost">
-            <div class="imgPost">
-                <img src="../imagens/' . $nome_imagem . '" alt="">
-                <hr>
-            </div>
-            <h1>'.$apelido.'</h1>
-        </div>
-        <input type="hidden" name="cod_perfil" value="'.$linha->cod_doSeguido.'">
-    </button
-</form>
-*/
