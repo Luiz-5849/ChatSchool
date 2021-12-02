@@ -32,7 +32,7 @@
 
             <div class="icons">
                 <a href="feed.php" class="one"><img src="../icons/house.svg" alt=""></a>
-                <a href="#" class="two"><img src="../icons/gear-wide.svg" alt=""></a>
+                <!--<a href="#" class="two"><img src="../icons/gear-wide.svg" alt=""></a>-->
                 <a href="../cruds/deslogar.php" class="three"><img src="../icons/door-open-fill.svg" alt=""></a>
                 <a href="perfil.php" class="four"><img src="../imagens/<?php echo $imagem_user; ?>" alt=""></a>
             </div>

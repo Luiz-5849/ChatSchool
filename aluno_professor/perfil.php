@@ -27,8 +27,9 @@
       <a class="navbar-brand" href="#">
         <a href="feed.php"><img src="../assets/logo.png" alt=""></a>
       </a>
-      <form class="d-flex">
-        <input class="form-control" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1">
+      <form class="d-flex" method="post" action="resultados_pesquisa.php">
+        <input class="form-control" type="search" placeholder="@    Search" aria-label="Search" aria-describedby="basic-addon1" name="pesquisar">
+       
       </form>
 
       <div class="icons">
@@ -42,7 +43,7 @@
           </div>
         </div>-->
 
-        <a href="#" class="two"><img src="../icons/gear-wide.svg" alt=""></a>
+        <!--<a href="#" class="two"><img src="../icons/gear-wide.svg" alt=""></a>-->
         <a href="../cruds/deslogar.php" class="three"><img src="../icons/door-open-fill.svg" alt=""></a>
         <a href="perfil.php" class="four"><img src="../imagens/<?php echo $imagem; ?>" alt=""></a>
       </div>

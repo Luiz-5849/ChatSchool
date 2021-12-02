@@ -228,3 +228,14 @@ input[type='file'] {
   transition: 0.6s;
   background-color: rgb(13, 95, 177);
 }
+
+.btn-pesq{
+  position: absolute;
+  margin-top: 0.3rem;
+  margin-left: 1rem;
+  border: none;
+  padding: 2px 7px;
+  border-radius: 25px;
+  border: solid 2px dodgerblue;
+  background-color: white;
+}

@@ -39,10 +39,14 @@ session_start();
         $saida = $comandoII->fetch(PDO::FETCH_OBJ);
         $cod_perfil_pTurma = $saida->cod_perfil;
 
-        $comandoIII = $con->prepare("insert into enturmando (cod_perfil, cod_turma) values (?, ?)");
-        $comandoIII->bindParam(1, $cod_perfil_pTurma);
-        $comandoIII->bindParam(2, $cod_turma);
-        $comandoIII->execute();
+        if($acesso == 2){
+
+        }else{
+            $comandoIII = $con->prepare("insert into enturmando (cod_perfil, cod_turma) values (?, ?)");
+            $comandoIII->bindParam(1, $cod_perfil_pTurma);
+            $comandoIII->bindParam(2, $cod_turma);
+            $comandoIII->execute();
+        }
 
         header("location:../coordenador/adm_co.html");
     }
