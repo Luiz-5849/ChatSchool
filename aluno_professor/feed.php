@@ -73,18 +73,6 @@
           <?php include '../cruds/exibir_comunicados_turma.php'; ?>
         </div>
       </div>
-      <!-- <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Comunicados pessoais
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div> -->
     </div>
 
     <!--Postagem do feed-->
@@ -93,7 +81,9 @@
         <div class="imagem">
           <a href="perfil.php"><img src="../imagens/<?php echo $nome_img_user; ?>" alt=""></a>
         </div>
-        <a href="perfil.php"><h1 style="color: black;"><?php echo $apelido_user; ?></h1></a>
+        <a href="perfil.php">
+          <h1 style="color: black;"><?php echo $apelido_user; ?></h1>
+        </a>
       </div>
       <form action="../cruds/toPost.php" enctype="multipart/form-data" class="textPost" id="publiPost" method="post">
         <textarea name="textarea" placeholder="Faça uma publicação:" id="textarea"></textarea>
@@ -115,8 +105,6 @@
     ?>
     <!--Fim do Feed-->
   </main>
-
-  <!--<script type="module" src="../scripts/form.js"></script>-->
 
 </body>
 
