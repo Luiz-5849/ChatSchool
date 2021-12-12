@@ -5,8 +5,9 @@ include 'conexao.php';
 $cod_perfil = $_SESSION['cod_perfil'];
 
 //Comando para puxar os códigos dos perfis a quem o usuário segue
-$comando = $con->prepare("SELECT postagens.cod_post, perfil.cod_imagem, perfil.apelido from perfil inner join postagens on postagens.cod_perfil = perfil.cod_perfil where postagens.cod_perfil in (select seguidores.cod_doSeguido from seguidores where seguidores.cod_perfil = ?) order by postagens.data_post desc");
+$comando = $con->prepare("SELECT postagens.cod_post, perfil.cod_imagem, perfil.apelido from perfil inner join postagens on postagens.cod_perfil = perfil.cod_perfil where postagens.cod_perfil in (select seguidores.cod_doSeguido from seguidores where seguidores.cod_perfil = ?) or postagens.cod_perfil = ? order by postagens.data_post desc");
 $comando->bindParam(1, $cod_perfil);
+$comando->bindParam(2, $cod_perfil);
 $comando->execute();
 
 //O if abaixo verificará se o usuário já segue alguém, se ele não seguir ninguém, não aparecerá nenhuma postagem
