@@ -75,7 +75,7 @@
                 <div class="row">
                   <div class="col-12">
                     <p class="profile-desc">
-                      <?php echo $bio; ?>
+                      <?php echo nl2br($bio); ?>
                     <form action="bio.html" method="post">
                       <input type="submit" value="adicionar bio">
                     </form>
