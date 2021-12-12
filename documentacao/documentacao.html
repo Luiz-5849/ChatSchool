@@ -84,131 +84,133 @@
     <h1>Banco de Dados</h1>
     <div class="bd">
         <br><br>
-        create database bancotcc;<br>
-        <br>
-        create table imagens(<br>
-        cod_imagem int primary key auto_increment,<br>
-        imagem blob null,<br>
-        nome_imagem varchar(1000) not null<br>
-        );<br>
-        <br>
-        create table escolas(<br>
-        cod_escola int primary key auto_increment,<br>
-        nome_escola varchar(50) not null<br>
-        );<br>
-        <br>
-        create table cursos(<br>
-        cod_curso int not null primary key auto_increment,<br>
-        nome_curso varchar(50)<br>
-        );<br>
-        <br>
-        create table turma(<br>
-        cod_turma int primary key auto_increment,<br>
-        nome_turma varchar(3) null,<br>
-        cod_curso int,<br>
-        foreign key(cod_curso) references cursos(cod_curso),<br>
-        periodo varchar(5) not null,<br>
-        cod_escola int not null,<br>
-        foreign key (cod_escola) references escolas(cod_escola),<br>
-        modulo_ano int null<br>
-        );<br>
-        <br>
-        create table perfil(<br>
-        cod_perfil int primary key auto_increment,<br>
-        nome varchar(50) null,<br>
-        apelido varchar(30), <br>
-        bio varchar(280) null,<br>
-        cod_imagem int null,<br>
-        foreign key(cod_imagem) references imagens(cod_imagem),<br>
-        data_criacao date null,<br>
-        cod_escola int null,<br>
-        foreign key(cod_escola) references escolas(cod_escola),<br>
-        login varchar(40) not null,<br>
-        senha varchar(15) not null,<br>
-        acesso int not null<br>
-        );<br>
-        <br>
-        create table enturmando(<br>
-        cod_enturmando int not null primary key auto_increment,<br>
-        cod_turma int not null,<br>
-        foreign key (cod_turma) references turma(cod_turma),<br>
-        cod_perfil int not null,<br>
-        foreign key (cod_perfil) references perfil(cod_perfil)<br>
-        );<br>
-        <br>
-        create table seguidores(<br>
-        cod_seguidor int primary key auto_increment,<br>
-        cod_perfil int not null,<br>
-        foreign key(cod_perfil) references perfil(cod_perfil),<br>
-        cod_doSeguido int,<br>
-        foreign key(cod_doSeguido) references perfil(cod_perfil)<br>
-        ); <br>
-        <br>
-        create table postagens(<br>
-        cod_post int primary key auto_increment,<br>
-        cod_perfil int not null,<br>
-        foreign key(cod_perfil) references perfil(cod_perfil),<br>
-        descricao_post varchar(70) null,<br>
-        data_post timestamp not null,<br>
-        cod_imagem int null,<br>
-        foreign key(cod_imagem) references imagens(cod_imagem)<br>
-        );<br>
-        <br>
-        create table likes(<br>
-        cod_like int primary key auto_increment,<br>
-        cod_perfil int not null,<br>
-        foreign key(cod_post) references perfil(cod_perfil),<br>
-        cod_post int not null,<br>
-        foreign key(cod_post) references postagens(cod_post)<br>
-        );<br>
-        <br>
-        create table comentarios(<br>
-        cod_comentario int primary key auto_increment,<br>
-        comentario varchar(280) null,<br>
-        cod_perfil int not null,<br>
-        foreign key(cod_perfil) references perfil(cod_perfil),<br>
-        cod_post int not null,<br>
-        foreign key(cod_post) references postagens(cod_post)<br>
-        );<br>
-        <br>
-        create table comunicados(<br>
-        cod_comunicado int primary key auto_increment,<br>
-        cod_turma int null,<br>
-        foreign key(cod_turma) references turma(cod_turma),<br>
-        comunicado varchar(350) null,<br>
-        cod_imagem int null,<br>
-        foreign key(cod_imagem) references imagens(cod_imagem),<br>
-        cod_perfil int null,<br>
-        foreign key(cod_perfil) references perfil(cod_perfil),<br>
-        cod_escola int null,<br>
-        foreign key(cod_escola) references escolas(cod_escola),<br>
-        data_comunicado timestamp not null<br>
-        );<br>
-        <br>
-        create table mensagens(<br>
-        cod_mensagem int primary key auto_increment,<br>
-        mensagem varchar(1000) null,<br>
-        remetente int not null,<br>
-        foreign key (remetente) references perfil(cod_perfil),<br>
-        destinatario int not null,<br>
-        foreign key(destinatario) references perfil(cod_perfil),<br>
-        data_mensagem date not null,<br>
-        hora_mensagem time not null<br>
-        );<br>
-        <br><br>
-        -- SELECTS<br>
-        select * from perfil;<br>
-        select * from seguidores;<br>
-        select * from postagens;<br>
-        select * from likes;<br>
-        select * from comentarios;<br>
-        select * from turma;<br>
-        select * from escolas;<br>
-        select * from comunicado;<br>
-        select * from imagens;<br>
-        select * from mensagens;<br>
-        select * from enturmando;<br>
-        select * from cursos;<br>
+        <pre>
+        create database bancotcc;
+        
+        create table imagens(
+        cod_imagem int primary key auto_increment,
+        imagem blob null,
+        nome_imagem varchar(1000) not null
+        );
+        
+        create table escolas(
+        cod_escola int primary key auto_increment,
+        nome_escola varchar(50) not null
+        );
+        
+        create table cursos(
+        cod_curso int not null primary key auto_increment,
+        nome_curso varchar(50)
+        );
+        
+        create table turma(
+        cod_turma int primary key auto_increment,
+        nome_turma varchar(3) null,
+        cod_curso int,
+        foreign key(cod_curso) references cursos(cod_curso),
+        periodo varchar(5) not null,
+        cod_escola int not null,
+        foreign key (cod_escola) references escolas(cod_escola),
+        modulo_ano int null
+        );
+        
+        create table perfil(
+        cod_perfil int primary key auto_increment,
+        nome varchar(50) null,
+        apelido varchar(30), 
+        bio varchar(280) null,
+        cod_imagem int null,
+        foreign key(cod_imagem) references imagens(cod_imagem),
+        data_criacao date null,
+        cod_escola int null,
+        foreign key(cod_escola) references escolas(cod_escola),
+        login varchar(40) not null,
+        senha varchar(15) not null,
+        acesso int not null
+        );
+        
+        create table enturmando(
+        cod_enturmando int not null primary key auto_increment,
+        cod_turma int not null,
+        foreign key (cod_turma) references turma(cod_turma),
+        cod_perfil int not null,
+        foreign key (cod_perfil) references perfil(cod_perfil)
+        );
+        
+        create table seguidores(
+        cod_seguidor int primary key auto_increment,
+        cod_perfil int not null,
+        foreign key(cod_perfil) references perfil(cod_perfil),
+        cod_doSeguido int,
+        foreign key(cod_doSeguido) references perfil(cod_perfil)
+        ); 
+        
+        create table postagens(
+        cod_post int primary key auto_increment,
+        cod_perfil int not null,
+        foreign key(cod_perfil) references perfil(cod_perfil),
+        descricao_post varchar(70) null,
+        data_post timestamp not null,
+        cod_imagem int null,
+        foreign key(cod_imagem) references imagens(cod_imagem)
+        );
+        
+        create table likes(
+        cod_like int primary key auto_increment,
+        cod_perfil int not null,
+        foreign key(cod_post) references perfil(cod_perfil),
+        cod_post int not null,
+        foreign key(cod_post) references postagens(cod_post)
+        );
+        
+        create table comentarios(
+        cod_comentario int primary key auto_increment,
+        comentario varchar(280) null,
+        cod_perfil int not null,
+        foreign key(cod_perfil) references perfil(cod_perfil),
+        cod_post int not null,
+        foreign key(cod_post) references postagens(cod_post)
+        );
+        
+        create table comunicados(
+        cod_comunicado int primary key auto_increment,
+        cod_turma int null,
+        foreign key(cod_turma) references turma(cod_turma),
+        comunicado varchar(350) null,
+        cod_imagem int null,
+        foreign key(cod_imagem) references imagens(cod_imagem),
+        cod_perfil int null,
+        foreign key(cod_perfil) references perfil(cod_perfil),
+        cod_escola int null,
+        foreign key(cod_escola) references escolas(cod_escola),
+        data_comunicado timestamp not null
+        );
+
+        create table mensagens(
+        cod_mensagem int primary key auto_increment,
+        mensagem varchar(1000) null,
+        remetente int not null,
+        foreign key (remetente) references perfil(cod_perfil),
+        destinatario int not null,
+        foreign key(destinatario) references perfil(cod_perfil),
+        data_mensagem date not null,
+        hora_mensagem time not null
+        );
+        
+        -- SELECTS
+        select * from perfil;
+        select * from seguidores;
+        select * from postagens;
+        select * from likes;
+        select * from comentarios;
+        select * from turma;
+        select * from escolas;
+        select * from comunicado;
+        select * from imagens;
+        select * from mensagens;
+        select * from enturmando;
+        select * from cursos;
+        </pre>
     </div>
 
     <div id="descricao">
